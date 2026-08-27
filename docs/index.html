@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The forecasting work behind dataphil.com, written up honestly - with the raw data and code to recompute every number.">
+<meta name="author" content="Phil Alexander">
+<meta property="og:type" content="website">
+<meta property="og:description" content="The forecasting work behind dataphil.com, written up honestly - with the raw data and code to recompute every number.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%BE</text></svg>">
+<title>dataphil lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:#f6f7f8; --surface:#ffffff; --sunken:#eef1f3;
+    --ink:#14181d; --ink-soft:#3d4750; --muted:#67737e;
+    --rule:#dde2e6; --rule-soft:#eaeef1;
+    --steel:#2f5d7c; --brick:#a3332a; --amber:#8a6420;
+    --display:"Newsreader",Georgia,serif;
+    --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#0d1115; --surface:#151b21; --sunken:#10161b;
+      --ink:#e7ebee; --ink-soft:#c2cbd3; --muted:#8b98a4;
+      --rule:#262e36; --rule-soft:#1d242b;
+      --steel:#79aacd; --brick:#d97a6d; --amber:#d0a252;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0d1115; --surface:#151b21; --sunken:#10161b;
+    --ink:#e7ebee; --ink-soft:#c2cbd3; --muted:#8b98a4;
+    --rule:#262e36; --rule-soft:#1d242b;
+    --steel:#79aacd; --brick:#d97a6d; --amber:#d0a252;
+  }
+
+  * { box-sizing:border-box; }
+  body {
+    background:var(--ground); color:var(--ink); font-family:var(--body);
+    font-size:17px; line-height:1.62; margin:0; padding:0 1.5rem 6rem;
+    -webkit-font-smoothing:antialiased;
+  }
+  .shell { max-width:56rem; margin:0 auto; }
+
+  /* ---- masthead ---- */
+  header.top { padding:5rem 0 2.5rem; border-bottom:1px solid var(--ink); }
+  .wordmark {
+    font-family:var(--body); font-weight:600; font-size:1.6rem;
+    letter-spacing:-0.02em; margin:0 0 0.15rem;
+  }
+  .wordmark span { color:var(--muted); font-weight:400; }
+  .sub {
+    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 2.75rem;
+  }
+  h1 {
+    font-family:var(--display); font-weight:500; font-size:clamp(1.9rem,4.6vw,3rem);
+    line-height:1.1; letter-spacing:-0.02em; margin:0 0 1.15rem;
+    max-width:20ch; text-wrap:balance;
+  }
+  .standfirst {
+    font-family:var(--display); font-size:1.15rem; line-height:1.55;
+    color:var(--ink-soft); max-width:54ch; margin:0;
+  }
+
+  /* ---- projects ---- */
+  .section-label {
+    font-family:var(--mono); font-size:0.66rem; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--muted);
+    margin:3.5rem 0 1.25rem; padding-bottom:0.6rem; border-bottom:1px solid var(--rule);
+  }
+
+  .project {
+    background:var(--surface); border:1px solid var(--rule);
+    padding:1.9rem 2rem 1.6rem; margin-bottom:1.5rem;
+  }
+
+  .proj-top {
+    display:flex; flex-wrap:wrap; align-items:baseline; gap:0.85rem;
+    margin-bottom:0.75rem;
+  }
+  .proj-top h2 {
+    font-family:var(--display); font-weight:500; font-size:1.65rem;
+    letter-spacing:-0.015em; margin:0;
+  }
+  .proj-top h2 a { color:inherit; text-decoration:none; border-bottom:2px solid transparent; }
+  .proj-top h2 a:hover { border-bottom-color:var(--brick); }
+
+  .chip {
+    font-family:var(--mono); font-size:0.6rem; font-weight:600;
+    letter-spacing:0.13em; text-transform:uppercase;
+    padding:0.25rem 0.55rem; border:1px solid currentColor; white-space:nowrap;
+  }
+  .chip-killed { color:var(--brick); }
+  .chip-shadow { color:var(--amber); }
+  .chip-live   { color:var(--steel); }
+
+  .proj-meta {
+    font-family:var(--mono); font-size:0.7rem; letter-spacing:0.04em;
+    color:var(--muted); margin:0 0 1.1rem;
+  }
+
+  .proj-body { max-width:62ch; }
+  .proj-body p { margin:0 0 0.95rem; }
+  .proj-body p:last-child { margin-bottom:0; }
+
+  .result {
+    font-family:var(--display); font-size:1.1rem; line-height:1.5;
+    color:var(--ink); background:var(--sunken);
+    border-left:3px solid var(--brick); padding:0.95rem 1.2rem;
+    margin:0 0 1.15rem; max-width:62ch;
+  }
+
+  .links {
+    display:flex; flex-wrap:wrap; gap:0.5rem;
+    margin-top:1.4rem; padding-top:1.3rem; border-top:1px solid var(--rule-soft);
+  }
+  .links a {
+    font-family:var(--mono); font-size:0.74rem; letter-spacing:0.03em;
+    text-decoration:none; color:var(--ink-soft);
+    border:1px solid var(--rule); padding:0.45rem 0.85rem;
+  }
+  .links a:hover { border-color:var(--brick); color:var(--brick); }
+  .links a:focus-visible { outline:2px solid var(--brick); outline-offset:2px; }
+  .links a.primary { border-color:var(--steel); color:var(--steel); }
+  .links a.primary:hover { background:var(--steel); color:var(--surface); border-color:var(--steel); }
+
+  /* ---- pending ---- */
+  .pending {
+    border:1px dashed var(--rule); padding:1.4rem 1.7rem;
+    color:var(--muted); font-size:0.94rem; line-height:1.6; max-width:62ch;
+  }
+  .pending b { color:var(--ink-soft); font-weight:600; }
+
+  /* ---- footer ---- */
+  footer {
+    margin-top:4rem; padding-top:2rem; border-top:1px solid var(--ink);
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:2rem;
+  }
+  footer h3 { font-size:0.92rem; font-weight:600; margin:0 0 0.55rem; }
+  footer p { font-size:0.88rem; line-height:1.6; color:var(--muted); max-width:40ch; margin:0; }
+  a { color:var(--steel); text-underline-offset:2px; }
+  a:hover { color:var(--brick); }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="top">
+    <p class="wordmark">dataphil <span>lab</span></p>
+    <p class="sub">Working notes &middot; models &middot; results that didn't go the way I wanted</p>
+
+    <h1>Where the models get tested before anyone trusts them</h1>
+
+    <p class="standfirst">
+      The product lives at <a href="https://dataphil.com">dataphil.com</a>. This is the other
+      half: the forecasting work behind it, written up honestly &mdash; including, so far,
+      mostly the parts that failed. Every result here comes with the raw data and code to
+      recompute it.
+    </p>
+  </header>
+
+  <p class="section-label">Projects</p>
+
+  <article class="project">
+    <div class="proj-top">
+      <h2><a href="mlb-shadow-test/">The MLB shadow test</a></h2>
+      <span class="chip chip-killed">Not deployed</span>
+    </div>
+    <p class="proj-meta">Jun&ndash;Aug 2026 &middot; 10,928 out-of-sample predictions &middot; Python, Monte&nbsp;Carlo, 7.8M pitches</p>
+
+    <div class="proj-body">
+      <p class="result">
+        The model forecast well and bet badly. Where it disagreed most with the market, it
+        predicted 64.7% and delivered 54.0%.
+      </p>
+
+      <p>
+        A Monte Carlo simulator that prices MLB hitter props from pitch-level Statcast data. I
+        wrote a pass/fail gate into the methodology document two days before the first
+        prediction, then ran it against live sportsbook prices for 87 days without betting a
+        dollar.
+      </p>
+      <p>
+        It failed. A head-to-head regression against the market price showed why: the model
+        carries genuine information the closing line doesn't (&beta;&nbsp;=&nbsp;0.231,
+        z&nbsp;=&nbsp;2.20) but earns only about a <b>quarter</b> of the weight the edge
+        formula was giving it. The decision rule was wrong, not the model &mdash; and neither
+        was good enough to ship.
+      </p>
+
+      <div class="links">
+        <a class="primary" href="mlb-shadow-test/">Read the writeup</a>
+        <a href="mlb-shadow-test/explorer.html">Try the explorer &rarr;</a>
+        <a href="https://colab.research.google.com/github/dataphilth/dataphil-lab/blob/main/projects/mlb-shadow-test/notebook.ipynb">Run it in Colab</a>
+        <a href="https://github.com/dataphilth/dataphil-lab">Data &amp; code</a>
+      </div>
+    </div>
+  </article>
+
+  <p class="section-label">Still accruing</p>
+
+  <div class="pending">
+    <p>
+      Two more sub-models off the same simulator are collecting evidence and aren't ready to
+      claim anything: a <b>game-totals</b> model, which runs the opposite direction from the
+      hitter model on a sample far too small to trust yet, and a <b>pitcher strikeout</b> model
+      whose variance is knowingly understated. Both are logging predictions daily under the
+      same discipline. They'll show up here when there's something honest to say about them.
+    </p>
+  </div>
+
+  <footer>
+    <div>
+      <h3>Who</h3>
+      <p>
+        Phil Alexander &mdash; Edgewater, Colorado. I build the market tools I wanted and
+        couldn't find, and I publish what the evidence actually said.
+      </p>
+    </div>
+    <div>
+      <h3>The product</h3>
+      <p>
+        <a href="https://dataphil.com">dataphil.com</a> &mdash; market intelligence for retail
+        investors and small family offices. Live daily, free, no paywall.
+      </p>
+    </div>
+    <div>
+      <h3>Everything is checkable</h3>
+      <p>
+        Every number on this site regenerates from a raw prediction log with one command. If a
+        figure here doesn't reproduce, it's a bug and I want to know.
+        <a href="https://github.com/dataphilth/dataphil-lab">Source &rarr;</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

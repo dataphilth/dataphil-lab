@@ -1,0 +1,663 @@
+date_placed,game,market,line,side,american_odds_at_bet,p_model,p_market,p_market_devig,edge_pct,ev,conviction,model_id,units_sized,result,payout_units,closing_odds,clv_pct,notes
+2026-06-16,MIN@TEX,game_total,8.5,over,-105,0.438,0.5122,0.4902,-0.0522,-0.1448,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-16,MIN@TEX,game_total,8.5,under,-114,0.562,0.5327,0.5098,0.0522,0.055,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-16,BAL@SEA,game_total,7.5,over,-106,0.589,0.5146,0.4924,0.0966,0.1447,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-16,BAL@SEA,game_total,7.5,under,-113,0.411,0.5305,0.5076,-0.0966,-0.2253,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-16,NYM@CIN,game_total,9.5,over,-117,0.531,0.5392,0.5152,0.0158,-0.0152,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-16,NYM@CIN,game_total,9.5,under,-103,0.469,0.5074,0.4848,-0.0158,-0.0756,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-16,COL@CHC,game_total,9.5,over,-112,0.362,0.5283,0.5043,-0.1423,-0.3148,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-16,COL@CHC,game_total,9.5,under,-108,0.638,0.5192,0.4957,0.1423,0.2287,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-16,PIT@ATH,game_total,10.5,over,-121,0.3045,0.5475,0.5227,-0.2182,-0.4439,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-16,PIT@ATH,game_total,10.5,under,100,0.6955,0.5,0.4773,0.2182,0.391,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-16,LAA@AZ,game_total,8.5,over,-122,0.423,0.5495,0.5248,-0.1018,-0.2303,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-16,LAA@AZ,game_total,8.5,under,101,0.577,0.4975,0.4752,0.1018,0.1598,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-16,TOR@BOS,game_total,7.5,over,-113,0.4795,0.5305,0.5065,-0.027,-0.0961,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-16,TOR@BOS,game_total,7.5,under,-107,0.5205,0.5169,0.4935,0.027,0.007,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,KC@WSH,game_total,10.5,over,-105,0.402,0.5122,0.4902,-0.0882,-0.2151,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,KC@WSH,game_total,10.5,under,-114,0.598,0.5327,0.5098,0.0882,0.1226,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-17,BAL@SEA,game_total,7.5,over,-109,0.4645,0.5215,0.4989,-0.0344,-0.1094,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-17,BAL@SEA,game_total,7.5,under,-110,0.5355,0.5238,0.5011,0.0344,0.0223,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-17,CWS@NYY,game_total,8.5,over,-107,0.424,0.5169,0.4946,-0.0706,-0.1797,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,CWS@NYY,game_total,8.5,under,-112,0.576,0.5283,0.5054,0.0706,0.0903,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-17,CLE@MIL,game_total,7.5,over,-112,0.47,0.5283,0.5043,-0.0343,-0.1103,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,CLE@MIL,game_total,7.5,under,-108,0.53,0.5192,0.4957,0.0343,0.0207,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,DET@HOU,game_total,8.5,over,-101,0.4575,0.5025,0.4804,-0.0229,-0.0895,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,DET@HOU,game_total,8.5,under,-119,0.5425,0.5434,0.5196,0.0229,-0.0016,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,LAA@AZ,game_total,9.5,over,101,0.417,0.4975,0.4761,-0.0591,-0.1618,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,LAA@AZ,game_total,9.5,under,-121,0.583,0.5475,0.5239,0.0591,0.0648,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-17,SD@STL,game_total,10.5,over,-105,0.253,0.5122,0.4902,-0.2372,-0.506,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-17,SD@STL,game_total,10.5,under,-114,0.747,0.5327,0.5098,0.2372,0.4023,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-18,MIN@TEX,game_total,7.5,over,-117,0.5025,0.5392,0.5152,-0.0127,-0.068,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,MIN@TEX,game_total,7.5,under,-103,0.4975,0.5074,0.4848,0.0127,-0.0195,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,BAL@SEA,game_total,7.5,over,-114,0.484,0.5327,0.5098,-0.0258,-0.0914,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,BAL@SEA,game_total,7.5,under,-105,0.516,0.5122,0.4902,0.0258,0.0074,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,NYM@PHI,game_total,9.5,over,-105,0.46,0.5122,0.4902,-0.0302,-0.1019,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,NYM@PHI,game_total,9.5,under,-114,0.54,0.5327,0.5098,0.0302,0.0137,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,CWS@NYY,game_total,9.5,over,-112,0.2875,0.5283,0.5054,-0.2179,-0.4558,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,CWS@NYY,game_total,9.5,under,-107,0.7125,0.5169,0.4946,0.2179,0.3784,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-18,CLE@MIL,game_total,7.5,over,-108,0.457,0.5192,0.4957,-0.0387,-0.1199,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,CLE@MIL,game_total,7.5,under,-112,0.543,0.5283,0.5043,0.0387,0.0278,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-18,SF@ATL,game_total,7.5,over,-117,0.5225,0.5392,0.5152,0.0073,-0.0309,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; void=no_result_ppd
+2026-06-18,SF@ATL,game_total,7.5,under,-103,0.4775,0.5074,0.4848,-0.0073,-0.0589,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; void=no_result_ppd
+2026-06-19,WSH@TB,game_total,7.5,over,-118,0.5335,0.5413,0.5174,0.0161,-0.0144,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,WSH@TB,game_total,7.5,under,-102,0.4665,0.5049,0.4826,-0.0161,-0.0761,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,BOS@SEA,game_total,6.5,over,-117,0.542,0.5392,0.5152,0.0268,0.0052,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,BOS@SEA,game_total,6.5,under,-103,0.458,0.5074,0.4848,-0.0268,-0.0973,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,CIN@NYY,game_total,8.5,over,-115,0.4035,0.5349,0.512,-0.1085,-0.2456,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,CIN@NYY,game_total,8.5,under,-104,0.5965,0.5098,0.488,0.1085,0.17,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-19,BAL@LAD,game_total,9.5,over,-105,0.4405,0.5122,0.4902,-0.0497,-0.14,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,BAL@LAD,game_total,9.5,under,-114,0.5595,0.5327,0.5098,0.0497,0.0503,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-19,PIT@COL,game_total,11.5,over,-108,0.3155,0.5192,0.4967,-0.1812,-0.3924,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,PIT@COL,game_total,11.5,under,-111,0.6845,0.5261,0.5033,0.1812,0.3012,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-19,MIL@ATL,game_total,7.5,over,-112,0.3935,0.5283,0.5054,-0.1119,-0.2551,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-19,MIL@ATL,game_total,7.5,under,-107,0.6065,0.5169,0.4946,0.1119,0.1733,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-19,MIN@AZ,game_total,8.5,over,-114,0.5565,0.5327,0.5098,0.0467,0.0447,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-19,MIN@AZ,game_total,8.5,under,-105,0.4435,0.5122,0.4902,-0.0467,-0.1341,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,KC@TB,game_total,7.5,over,100,0.5565,0.5,0.4783,0.0782,0.113,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-22,KC@TB,game_total,7.5,under,-120,0.4435,0.5455,0.5217,-0.0782,-0.1869,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,AZ@STL,game_total,8.5,over,-112,0.4885,0.5283,0.5054,-0.0169,-0.0753,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,AZ@STL,game_total,8.5,under,-107,0.5115,0.5169,0.4946,0.0169,-0.0105,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,ATL@SD,game_total,7.5,over,-107,0.519,0.5169,0.4946,0.0244,0.0041,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,ATL@SD,game_total,7.5,under,-112,0.481,0.5283,0.5054,-0.0244,-0.0895,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,CHC@NYM,game_total,8.5,over,-114,0.501,0.5327,0.5098,-0.0088,-0.0595,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; void=no_result_ppd
+2026-06-22,CHC@NYM,game_total,8.5,under,-105,0.499,0.5122,0.4902,0.0088,-0.0258,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; void=no_result_ppd
+2026-06-22,LAD@MIN,game_total,9.5,over,-104,0.3835,0.5098,0.487,-0.1035,-0.2478,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,LAD@MIN,game_total,9.5,under,-116,0.6165,0.537,0.513,0.1035,0.148,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-22,TEX@MIA,game_total,8.5,over,-105,0.4735,0.5122,0.4902,-0.0167,-0.0755,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,TEX@MIA,game_total,8.5,under,-114,0.5265,0.5327,0.5098,0.0167,-0.0117,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,NYY@DET,game_total,8.5,over,-105,0.373,0.5122,0.4892,-0.1162,-0.2718,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,NYY@DET,game_total,8.5,under,-115,0.627,0.5349,0.5108,0.1162,0.1722,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-22,CLE@CWS,game_total,7.5,over,-117,0.434,0.5392,0.5152,-0.0812,-0.1951,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,CLE@CWS,game_total,7.5,under,-103,0.566,0.5074,0.4848,0.0812,0.1155,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-22,HOU@TOR,game_total,7.5,over,102,0.451,0.495,0.473,-0.022,-0.089,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-22,HOU@TOR,game_total,7.5,under,-123,0.549,0.5516,0.527,0.022,-0.0047,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,PHI@WSH,game_total,8.5,over,-118,0.426,0.5413,0.5174,-0.0914,-0.213,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,PHI@WSH,game_total,8.5,under,-102,0.574,0.5049,0.4826,0.0914,0.1367,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-23,HOU@TOR,game_total,8.5,over,-115,0.503,0.5349,0.5108,-0.0078,-0.0596,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-23,HOU@TOR,game_total,8.5,under,-105,0.497,0.5122,0.4892,0.0078,-0.0297,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-23,AZ@STL,game_total,8.5,over,-107,0.475,0.5169,0.4946,-0.0196,-0.0811,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,AZ@STL,game_total,8.5,under,-112,0.525,0.5283,0.5054,0.0196,-0.0062,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,ATH@SF,game_total,8.5,over,-117,0.4465,0.5392,0.5152,-0.0687,-0.1719,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,ATH@SF,game_total,8.5,under,-103,0.5535,0.5074,0.4848,0.0687,0.0909,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-23,SEA@PIT,game_total,8.5,over,-111,0.474,0.5261,0.5033,-0.0293,-0.099,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,SEA@PIT,game_total,8.5,under,-108,0.526,0.5192,0.4967,0.0293,0.013,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,TEX@MIA,game_total,8.5,over,-101,0.4845,0.5025,0.4804,0.0041,-0.0358,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-23,TEX@MIA,game_total,8.5,under,-119,0.5155,0.5434,0.5196,-0.0041,-0.0513,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-23,NYY@DET,game_total,7.5,over,-109,0.482,0.5215,0.4989,-0.0169,-0.0758,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,NYY@DET,game_total,7.5,under,-110,0.518,0.5238,0.5011,0.0169,-0.0111,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,MIL@CIN,game_total,9.5,over,-118,0.3645,0.5413,0.5174,-0.1529,-0.3266,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-23,MIL@CIN,game_total,9.5,under,-102,0.6355,0.5049,0.4826,0.1529,0.2585,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-24,CHC@NYM,game_total,8.5,over,-114,0.51,0.5327,0.5098,0.0002,-0.0426,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-24,CHC@NYM,game_total,8.5,under,-105,0.49,0.5122,0.4902,-0.0002,-0.0433,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-25,PHI@WSH,game_total,8.5,over,-111,0.39,0.5261,0.5033,-0.1133,-0.2586,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-25,PHI@WSH,game_total,8.5,under,-108,0.61,0.5192,0.4967,0.1133,0.1748,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-25,SEA@PIT,game_total,8.5,over,-107,0.388,0.5169,0.4946,-0.1066,-0.2494,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-25,SEA@PIT,game_total,8.5,under,-112,0.612,0.5283,0.5054,0.1066,0.1585,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-25,CHC@NYM,game_total,8.5,over,-113,0.455,0.5305,0.5076,-0.0526,-0.1423,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-25,CHC@NYM,game_total,8.5,under,-106,0.545,0.5146,0.4924,0.0526,0.0592,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-25,NYY@BOS,game_total,7.5,over,-117,0.529,0.5392,0.5152,0.0138,-0.0189,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-25,NYY@BOS,game_total,7.5,under,-103,0.471,0.5074,0.4848,-0.0138,-0.0717,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,TEX@TOR,game_total,8.5,over,-114,0.483,0.5327,0.5098,-0.0268,-0.0933,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,TEX@TOR,game_total,8.5,under,-105,0.517,0.5122,0.4902,0.0268,0.0094,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,AZ@TB,game_total,8.5,over,-120,0.5435,0.5455,0.5217,0.0218,-0.0036,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,AZ@TB,game_total,8.5,under,100,0.4565,0.5,0.4783,-0.0218,-0.087,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,LAD@SD,game_total,7.5,over,-110,0.574,0.5238,0.5011,0.0729,0.0958,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-26,LAD@SD,game_total,7.5,under,-109,0.426,0.5215,0.4989,-0.0729,-0.1832,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,CIN@PIT,game_total,7.5,over,-111,0.4155,0.5261,0.5033,-0.0878,-0.2102,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,CIN@PIT,game_total,7.5,under,-108,0.5845,0.5192,0.4967,0.0878,0.1257,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-26,ATH@LAA,game_total,8.5,over,-112,0.409,0.5283,0.5054,-0.0964,-0.2258,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,ATH@LAA,game_total,8.5,under,-107,0.591,0.5169,0.4946,0.0964,0.1433,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-26,SEA@CLE,game_total,7.5,over,-115,0.4325,0.5349,0.512,-0.0795,-0.1914,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,SEA@CLE,game_total,7.5,under,-104,0.5675,0.5098,0.488,0.0795,0.1132,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-26,NYY@BOS,game_total,8.5,over,-121,0.5,0.5475,0.5227,-0.0227,-0.0868,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,NYY@BOS,game_total,8.5,under,100,0.5,0.5,0.4773,0.0227,0.0,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-26,ATL@SF,game_total,8.5,over,-105,0.496,0.5122,0.4902,0.0058,-0.0316,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-26,ATL@SF,game_total,8.5,under,-114,0.504,0.5327,0.5098,-0.0058,-0.0539,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-29,NYM@TOR,game_total,8.5,over,-119,0.473,0.5434,0.5183,-0.0453,-0.1295,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,NYM@TOR,game_total,8.5,under,-102,0.527,0.5049,0.4817,0.0453,0.0437,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-29,LAA@SEA,game_total,7.5,over,-119,0.535,0.5434,0.5183,0.0167,-0.0154,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,LAA@SEA,game_total,7.5,under,-102,0.465,0.5049,0.4817,-0.0167,-0.0791,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,PIT@PHI,game_total,8.5,over,-110,0.4175,0.5238,0.5,-0.0825,-0.203,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,PIT@PHI,game_total,8.5,under,-110,0.5825,0.5238,0.5,0.0825,0.1121,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-29,DET@NYY,game_total,7.5,over,-117,0.4425,0.5392,0.5152,-0.0727,-0.1793,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,DET@NYY,game_total,7.5,under,-103,0.5575,0.5074,0.4848,0.0727,0.0988,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-29,TEX@CLE,game_total,7.5,over,-114,0.3795,0.5327,0.5098,-0.1303,-0.2876,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,TEX@CLE,game_total,7.5,under,-105,0.6205,0.5122,0.4902,0.1303,0.2115,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-29,WSH@BOS,game_total,8.5,over,-110,0.5155,0.5238,0.5011,0.0144,-0.0159,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,WSH@BOS,game_total,8.5,under,-109,0.4845,0.5215,0.4989,-0.0144,-0.071,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-29,SD@CHC,game_total,11.5,over,-108,0.2385,0.5192,0.4957,-0.2572,-0.5407,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-29,SD@CHC,game_total,11.5,under,-112,0.7615,0.5283,0.5043,0.2572,0.4414,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-06-30,PIT@PHI,game_total,8.5,over,-105,0.338,0.5122,0.4902,-0.1522,-0.3401,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-30,PIT@PHI,game_total,8.5,under,-114,0.662,0.5327,0.5098,0.1522,0.2427,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-30,MIN@HOU,game_total,8.5,over,-102,0.4135,0.5049,0.4817,-0.0682,-0.1811,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-30,MIN@HOU,game_total,8.5,under,-119,0.5865,0.5434,0.5183,0.0682,0.0793,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-30,MIA@COL,game_total,11.5,over,-101,0.338,0.5025,0.4795,-0.1415,-0.3273,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-30,MIA@COL,game_total,11.5,under,-120,0.662,0.5455,0.5205,0.1415,0.2136,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-30,TEX@CLE,game_total,7.5,over,-114,0.4685,0.5327,0.5098,-0.0413,-0.1205,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-30,TEX@CLE,game_total,7.5,under,-105,0.5315,0.5122,0.4902,0.0413,0.0377,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-30,SD@CHC,game_total,11.5,over,100,0.2425,0.5,0.4783,-0.2358,-0.515,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-06-30,SD@CHC,game_total,11.5,under,-120,0.7575,0.5455,0.5217,0.2358,0.3887,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-06-30,CWS@BAL,game_total,10.5,over,-108,0.3995,0.5192,0.4957,-0.0962,-0.2306,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-06-30,CWS@BAL,game_total,10.5,under,-112,0.6005,0.5283,0.5043,0.0962,0.1367,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,NYM@TOR,game_total,8.5,over,-122,0.5695,0.5495,0.5248,0.0447,0.0363,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,NYM@TOR,game_total,8.5,under,101,0.4305,0.4975,0.4752,-0.0447,-0.1347,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-01,DET@NYY,game_total,9.5,over,-107,0.4025,0.5169,0.4946,-0.0921,-0.2213,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-01,DET@NYY,game_total,9.5,under,-112,0.5975,0.5283,0.5054,0.0921,0.131,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,TB@KC,game_total,10.5,over,-110,0.299,0.5238,0.5,-0.201,-0.4292,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-01,TB@KC,game_total,10.5,under,-110,0.701,0.5238,0.5,0.201,0.3383,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,WSH@BOS,game_total,9.5,over,-112,0.3415,0.5283,0.5054,-0.1639,-0.3536,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-01,WSH@BOS,game_total,9.5,under,-107,0.6585,0.5169,0.4946,0.1639,0.2739,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,CWS@BAL,game_total,10.5,over,-102,0.3135,0.5049,0.4826,-0.1691,-0.3791,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-01,CWS@BAL,game_total,10.5,under,-118,0.6865,0.5413,0.5174,0.1691,0.2683,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-01,SF@AZ,game_total,9.5,over,-105,0.457,0.5122,0.4902,-0.0332,-0.1078,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-01,SF@AZ,game_total,9.5,under,-114,0.543,0.5327,0.5098,0.0332,0.0193,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-02,PIT@PHI,game_total,10.5,over,-108,0.3765,0.5192,0.4967,-0.1202,-0.2749,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-02,PIT@PHI,game_total,10.5,under,-111,0.6235,0.5261,0.5033,0.1202,0.1852,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-02,SD@LAD,game_total,8.5,over,-122,0.4975,0.5495,0.5261,-0.0286,-0.0947,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-02,SD@LAD,game_total,8.5,under,102,0.5025,0.495,0.4739,0.0286,0.0151,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-02,TB@KC,game_total,10.5,over,-110,0.3095,0.5238,0.5011,-0.1916,-0.4091,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-02,TB@KC,game_total,10.5,under,-109,0.6905,0.5215,0.4989,0.1916,0.324,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected
+2026-07-02,CWS@CLE,game_total,8.5,over,-107,0.4195,0.5169,0.4946,-0.0751,-0.1884,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-02,CWS@CLE,game_total,8.5,under,-112,0.5805,0.5283,0.5054,0.0751,0.0988,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-07-03,PIT@WSH,game_total,9.5,over,-110,0.361,0.5238,0.5,-0.139,-0.3108,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-03,PIT@WSH,game_total,9.5,under,-110,0.639,0.5238,0.5,0.139,0.2199,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-07-03,BAL@CIN,game_total,10.5,over,-105,0.38,0.5122,0.4902,-0.1102,-0.2581,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-03,BAL@CIN,game_total,10.5,under,-114,0.62,0.5327,0.5098,0.1102,0.1639,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-03,STL@CHC,game_total,10.5,over,-121,0.364,0.5475,0.5227,-0.1587,-0.3352,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-03,STL@CHC,game_total,10.5,under,100,0.636,0.5,0.4773,0.1587,0.272,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-03,MIA@ATH,game_total,10.5,over,-114,0.2455,0.5327,0.5098,-0.2643,-0.5391,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected
+2026-07-03,MIA@ATH,game_total,10.5,under,-105,0.7545,0.5122,0.4902,0.2643,0.4731,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected
+2026-07-06,HOU@WSH,game_total,9.5,over,-117,0.507,0.5392,0.5152,-0.0082,-0.0597,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,HOU@WSH,game_total,9.5,under,-103,0.493,0.5074,0.4848,0.0082,-0.0283,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,NYY@TB,game_total,7.5,over,101,0.521,0.4975,0.4752,0.0458,0.0472,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-06,NYY@TB,game_total,7.5,under,-122,0.479,0.5495,0.5248,-0.0458,-0.1284,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,TOR@SF,game_total,7.5,over,-114,0.575,0.5327,0.5098,0.0652,0.0794,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-06,TOR@SF,game_total,7.5,under,-105,0.425,0.5122,0.4902,-0.0652,-0.1702,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,AZ@SD,game_total,8.5,over,-111,0.482,0.5261,0.5033,-0.0213,-0.0838,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,AZ@SD,game_total,8.5,under,-108,0.518,0.5192,0.4967,0.0213,-0.0024,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,COL@LAD,game_total,9.5,over,-116,0.4545,0.537,0.513,-0.0585,-0.1537,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-06,COL@LAD,game_total,9.5,under,-104,0.5455,0.5098,0.487,0.0585,0.07,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-07,AZ@SD,game_total,8.5,over,-116,0.4895,0.537,0.513,-0.0235,-0.0885,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,AZ@SD,game_total,8.5,under,-104,0.5105,0.5098,0.487,0.0235,0.0013,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,CLE@MIN,game_total,8.5,over,-112,0.341,0.5283,0.5043,-0.1633,-0.3545,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,CLE@MIN,game_total,8.5,under,-108,0.659,0.5192,0.4957,0.1633,0.2692,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-07,COL@LAD,game_total,9.5,over,-111,0.4055,0.5261,0.5022,-0.0967,-0.2292,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,COL@LAD,game_total,9.5,under,-109,0.5945,0.5215,0.4978,0.0967,0.1399,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-07,BOS@CWS,game_total,8.5,over,-102,0.3795,0.5049,0.4826,-0.1031,-0.2484,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,BOS@CWS,game_total,8.5,under,-118,0.6205,0.5413,0.5174,0.1031,0.1464,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-07,CHC@BAL,game_total,9.5,over,-102,0.449,0.5049,0.4826,-0.0336,-0.1108,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,CHC@BAL,game_total,9.5,under,-118,0.551,0.5413,0.5174,0.0336,0.018,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,MIL@STL,game_total,7.5,over,-118,0.4225,0.5413,0.5174,-0.0949,-0.2194,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,MIL@STL,game_total,7.5,under,-102,0.5775,0.5049,0.4826,0.0949,0.1437,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-07,PHI@CIN,game_total,8.5,over,-116,0.5275,0.537,0.513,0.0145,-0.0177,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-07,PHI@CIN,game_total,8.5,under,-104,0.4725,0.5098,0.487,-0.0145,-0.0732,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-08,LAA@TEX,game_total,7.5,over,-114,0.523,0.5327,0.5098,0.0132,-0.0182,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-08,LAA@TEX,game_total,7.5,under,-105,0.477,0.5122,0.4902,-0.0132,-0.0687,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-08,ATL@PIT,game_total,9.5,over,-101,0.3325,0.5025,0.4795,-0.147,-0.3383,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-08,ATL@PIT,game_total,9.5,under,-120,0.6675,0.5455,0.5205,0.147,0.2237,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-08,SEA@MIA,game_total,8.5,over,-110,0.474,0.5238,0.5,-0.026,-0.0951,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-08,SEA@MIA,game_total,8.5,under,-110,0.526,0.5238,0.5,0.026,0.0042,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,NYY@TB,game_total,7.5,over,-110,0.581,0.5238,0.5011,0.0799,0.1092,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,NYY@TB,game_total,7.5,under,-109,0.419,0.5215,0.4989,-0.0799,-0.1966,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,MIL@STL,game_total,8.5,over,-105,0.55,0.5122,0.4902,0.0598,0.0738,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,MIL@STL,game_total,8.5,under,-114,0.45,0.5327,0.5098,-0.0598,-0.1553,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,ATL@PIT,game_total,9.5,over,-112,0.4155,0.5283,0.5043,-0.0888,-0.2135,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,ATL@PIT,game_total,9.5,under,-108,0.5845,0.5192,0.4957,0.0888,0.1257,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,CLE@MIN,game_total,8.5,over,-117,0.393,0.5392,0.5152,-0.1222,-0.2711,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,CLE@MIN,game_total,8.5,under,-103,0.607,0.5074,0.4848,0.1222,0.1963,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,PHI@CIN,game_total,9.5,over,-104,0.428,0.5098,0.488,-0.06,-0.1605,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,PHI@CIN,game_total,9.5,under,-115,0.572,0.5349,0.512,0.06,0.0694,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,CHC@BAL,game_total,9.5,over,-117,0.3885,0.5392,0.5152,-0.1267,-0.2794,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,CHC@BAL,game_total,9.5,under,-103,0.6115,0.5074,0.4848,0.1267,0.2052,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-09,COL@SF,game_total,8.5,over,-105,0.4875,0.5122,0.4902,-0.0027,-0.0482,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-09,COL@SF,game_total,8.5,under,-114,0.5125,0.5327,0.5098,0.0027,-0.0379,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,HOU@TEX,game_total,8.5,over,-102,0.5505,0.5049,0.4826,0.0679,0.0902,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-10,HOU@TEX,game_total,8.5,under,-118,0.4495,0.5413,0.5174,-0.0679,-0.1695,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,SEA@TB,game_total,8.5,over,-115,0.4525,0.5349,0.5108,-0.0583,-0.154,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,SEA@TB,game_total,8.5,under,-105,0.5475,0.5122,0.4892,0.0583,0.0689,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-10,COL@SF,game_total,8.5,over,-109,0.5445,0.5215,0.4978,0.0467,0.044,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-10,COL@SF,game_total,8.5,under,-111,0.4555,0.5261,0.5022,-0.0467,-0.1341,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,TOR@SD,game_total,8.5,over,-111,0.5165,0.5261,0.5022,0.0143,-0.0182,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,TOR@SD,game_total,8.5,under,-109,0.4835,0.5215,0.4978,-0.0143,-0.0729,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,MIL@PIT,game_total,8.5,over,-117,0.353,0.5392,0.5152,-0.1622,-0.3453,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=confirmed; void=no_result_ppd
+2026-07-10,MIL@PIT,game_total,8.5,under,-103,0.647,0.5074,0.4848,0.1622,0.2752,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=True; lineup=confirmed; void=no_result_ppd
+2026-07-10,BOS@NYM,game_total,7.5,over,-110,0.5165,0.5238,0.5,0.0165,-0.0139,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,BOS@NYM,game_total,7.5,under,-110,0.4835,0.5238,0.5,-0.0165,-0.077,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,LAA@MIN,game_total,9.5,over,-103,0.3565,0.5074,0.4848,-0.1283,-0.2974,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,LAA@MIN,game_total,9.5,under,-117,0.6435,0.5392,0.5152,0.1283,0.1935,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-10,PHI@DET,game_total,8.5,over,-113,0.4725,0.5305,0.499,-0.0265,-0.1093,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,PHI@DET,game_total,8.5,under,-114,0.5275,0.5327,0.501,0.0265,-0.0098,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,KC@BAL,game_total,10.5,over,-104,0.41,0.5098,0.487,-0.077,-0.1958,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-10,KC@BAL,game_total,10.5,under,-116,0.59,0.537,0.513,0.077,0.0986,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,NYY@WSH,game_total,6.5,over,-109,0.7025,0.5215,0.4897,0.2128,0.347,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,NYY@WSH,game_total,6.5,under,-119,0.2975,0.5434,0.5103,-0.2128,-0.4525,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,SEA@TB,game_total,8.5,over,-133,0.464,0.5708,0.5355,-0.0715,-0.1871,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,SEA@TB,game_total,8.5,under,102,0.536,0.495,0.4645,0.0715,0.0827,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,ATL@STL,game_total,6.5,over,-128,0.677,0.5614,0.5277,0.1493,0.2059,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,ATL@STL,game_total,6.5,under,-101,0.323,0.5025,0.4723,-0.1493,-0.3572,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,TOR@SD,game_total,8.5,over,-120,0.421,0.5455,0.5205,-0.0995,-0.2282,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,TOR@SD,game_total,8.5,under,-101,0.579,0.5025,0.4795,0.0995,0.1523,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,LAA@MIN,game_total,8.5,over,-126,0.4095,0.5575,0.5235,-0.114,-0.2655,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,LAA@MIN,game_total,8.5,under,-103,0.5905,0.5074,0.4765,0.114,0.1638,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,CLE@MIA,game_total,7.5,over,-123,0.42,0.5516,0.5185,-0.0985,-0.2385,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,CLE@MIA,game_total,7.5,under,-105,0.58,0.5122,0.4815,0.0985,0.1324,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-12,CHC@CIN,game_total,8.5,over,-139,0.5465,0.5816,0.5463,0.0002,-0.0603,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,CHC@CIN,game_total,8.5,under,107,0.4535,0.4831,0.4537,-0.0002,-0.0613,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,KC@BAL,game_total,10.5,over,-130,0.402,0.5652,0.5306,-0.1286,-0.2888,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed
+2026-07-12,KC@BAL,game_total,10.5,under,100,0.598,0.5,0.4694,0.1286,0.196,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed
+2026-07-16,NYM@PHI,game_total,9.5,over,-109,0.47,0.5215,0.4978,-0.0278,-0.0988,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.572
+2026-07-16,NYM@PHI,game_total,9.5,under,-111,0.53,0.5261,0.5022,0.0278,0.0075,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.572
+2026-07-17,CWS@TOR,game_total,8.5,over,-112,0.536,0.5283,0.5043,0.0317,0.0146,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,CWS@TOR,game_total,8.5,under,-108,0.464,0.5192,0.4957,-0.0317,-0.1064,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,BAL@HOU,game_total,8.5,over,-120,0.605,0.5455,0.5217,0.0833,0.1091,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,BAL@HOU,game_total,8.5,under,100,0.395,0.5,0.4783,-0.0833,-0.21,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,PIT@CLE,game_total,7.5,over,-112,0.431,0.5283,0.5043,-0.0733,-0.1842,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623; void=no_result_ppd
+2026-07-17,PIT@CLE,game_total,7.5,under,-108,0.569,0.5192,0.4957,0.0733,0.0958,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.623; void=no_result_ppd
+2026-07-17,MIN@CHC,game_total,10.5,over,-105,0.363,0.5122,0.4892,-0.1262,-0.2913,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,MIN@CHC,game_total,10.5,under,-115,0.637,0.5349,0.5108,0.1262,0.1909,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,TEX@ATL,game_total,8.5,over,-105,0.41,0.5122,0.4892,-0.0792,-0.1995,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.623
+2026-07-17,TEX@ATL,game_total,8.5,under,-115,0.59,0.5349,0.5108,0.0792,0.1031,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.623
+2026-07-19,NYM@PHI,game_total,8.5,over,-119,0.6075,0.5434,0.5196,0.0879,0.118,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,NYM@PHI,game_total,8.5,under,-101,0.3925,0.5025,0.4804,-0.0879,-0.2189,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,DET@LAA,game_total,9.5,over,101,0.3275,0.4975,0.4752,-0.1477,-0.3417,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,DET@LAA,game_total,9.5,under,-122,0.6725,0.5495,0.5248,0.1477,0.2237,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,SD@KC,game_total,9.5,over,-118,0.388,0.5413,0.5174,-0.1294,-0.2832,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,SD@KC,game_total,9.5,under,-102,0.612,0.5049,0.4826,0.1294,0.212,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,BAL@HOU,game_total,8.5,over,-107,0.544,0.5169,0.4946,0.0494,0.0524,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,BAL@HOU,game_total,8.5,under,-112,0.456,0.5283,0.5054,-0.0494,-0.1368,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,MIN@CHC,game_total,7.5,over,-107,0.572,0.5169,0.4946,0.0774,0.1066,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,MIN@CHC,game_total,7.5,under,-112,0.428,0.5283,0.5054,-0.0774,-0.1898,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,TB@BOS,game_total,8.5,over,-105,0.495,0.5122,0.4902,0.0048,-0.0336,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,TB@BOS,game_total,8.5,under,-114,0.505,0.5327,0.5098,-0.0048,-0.052,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,TEX@ATL,game_total,8.5,over,-120,0.4725,0.5455,0.5217,-0.0492,-0.1338,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,TEX@ATL,game_total,8.5,under,100,0.5275,0.5,0.4783,0.0492,0.055,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,WSH@ATH,game_total,10.5,over,-113,0.311,0.5305,0.5065,-0.1955,-0.4138,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.488
+2026-07-19,WSH@ATH,game_total,10.5,under,-107,0.689,0.5169,0.4935,0.1955,0.3329,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.488
+2026-07-20,TB@TOR,game_total,7.5,over,-104,0.57,0.5098,0.488,0.082,0.1181,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,TB@TOR,game_total,7.5,under,-115,0.43,0.5349,0.512,-0.082,-0.1961,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,CWS@TEX,game_total,7.5,over,-110,0.5075,0.5238,0.5,0.0075,-0.0311,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,CWS@TEX,game_total,7.5,under,-110,0.4925,0.5238,0.5,-0.0075,-0.0598,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,CIN@SEA,game_total,7.5,over,-114,0.4325,0.5327,0.5098,-0.0773,-0.1881,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,CIN@SEA,game_total,7.5,under,-105,0.5675,0.5122,0.4902,0.0773,0.108,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,LAD@PHI,game_total,8.5,over,-110,0.4965,0.5238,0.5,-0.0035,-0.0521,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,LAD@PHI,game_total,8.5,under,-110,0.5035,0.5238,0.5,0.0035,-0.0388,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,PIT@NYY,game_total,7.5,over,-119,0.52,0.5434,0.5183,0.0017,-0.043,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,PIT@NYY,game_total,7.5,under,-102,0.48,0.5049,0.4817,-0.0017,-0.0494,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,NYM@MIL,game_total,7.5,over,-110,0.4525,0.5238,0.5,-0.0475,-0.1361,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,NYM@MIL,game_total,7.5,under,-110,0.5475,0.5238,0.5,0.0475,0.0452,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,SF@KC,game_total,10.5,over,-102,0.4,0.5049,0.4826,-0.0826,-0.2078,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,SF@KC,game_total,10.5,under,-118,0.6,0.5413,0.5174,0.0826,0.1085,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,MIN@CLE,game_total,7.5,over,-110,0.4235,0.5238,0.5,-0.0765,-0.1915,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.410
+2026-07-20,MIN@CLE,game_total,7.5,under,-110,0.5765,0.5238,0.5,0.0765,0.1006,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.410
+2026-07-21,TB@TOR,game_total,7.5,over,-110,0.479,0.5238,0.5,-0.021,-0.0855,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,TB@TOR,game_total,7.5,under,-110,0.521,0.5238,0.5,0.021,-0.0054,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,CWS@TEX,game_total,8.5,over,-118,0.486,0.5413,0.5174,-0.0314,-0.1021,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,CWS@TEX,game_total,8.5,under,-102,0.514,0.5049,0.4826,0.0314,0.0179,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,CIN@SEA,game_total,7.5,over,-103,0.4455,0.5074,0.4848,-0.0393,-0.122,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,CIN@SEA,game_total,7.5,under,-117,0.5545,0.5392,0.5152,0.0393,0.0284,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,PIT@NYY,game_total,9.5,over,-105,0.3765,0.5122,0.4902,-0.1137,-0.2649,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.485; void=no_result_ppd
+2026-07-21,PIT@NYY,game_total,9.5,under,-114,0.6235,0.5327,0.5098,0.1137,0.1704,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.485; void=no_result_ppd
+2026-07-21,SF@KC,game_total,9.5,over,101,0.514,0.4975,0.4752,0.0388,0.0331,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,SF@KC,game_total,9.5,under,-122,0.486,0.5495,0.5248,-0.0388,-0.1156,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.485
+2026-07-21,BAL@BOS,game_total,8.5,over,-105,0.5075,0.5122,0.4902,0.0173,-0.0092,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.485; void=no_result_ppd
+2026-07-21,BAL@BOS,game_total,8.5,under,-114,0.4925,0.5327,0.5098,-0.0173,-0.0755,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.485; void=no_result_ppd
+2026-07-22,PIT@NYY,game_total,9.5,over,-105,0.294,0.5122,0.4902,-0.1962,-0.426,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.476
+2026-07-22,PIT@NYY,game_total,9.5,under,-114,0.706,0.5327,0.5098,0.1962,0.3253,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.476
+2026-07-24,AZ@WSH,game_total,9.5,over,-112,0.442,0.5283,0.5043,-0.0623,-0.1633,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,AZ@WSH,game_total,9.5,under,-108,0.558,0.5192,0.4957,0.0623,0.0747,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,SEA@TEX,game_total,7.5,over,-112,0.5175,0.5283,0.5043,0.0132,-0.0204,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,SEA@TEX,game_total,7.5,under,-108,0.4825,0.5192,0.4957,-0.0132,-0.0708,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,LAA@SF,game_total,8.5,over,-105,0.5205,0.5122,0.4902,0.0303,0.0162,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,LAA@SF,game_total,8.5,under,-114,0.4795,0.5327,0.5098,-0.0303,-0.0999,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,NYY@PHI,game_total,7.5,over,-105,0.464,0.5122,0.4902,-0.0262,-0.0941,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,NYY@PHI,game_total,7.5,under,-114,0.536,0.5327,0.5098,0.0262,0.0062,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,ATH@MIN,game_total,9.5,over,-110,0.4255,0.5238,0.5,-0.0745,-0.1877,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,ATH@MIN,game_total,9.5,under,-110,0.5745,0.5238,0.5,0.0745,0.0968,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,COL@MIL,game_total,8.5,over,-114,0.46,0.5327,0.5087,-0.0487,-0.1365,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,COL@MIL,game_total,8.5,under,-106,0.54,0.5146,0.4913,0.0487,0.0494,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,ATL@BAL,game_total,8.5,over,-118,0.453,0.5413,0.5174,-0.0644,-0.1631,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.484
+2026-07-24,ATL@BAL,game_total,8.5,under,-102,0.547,0.5049,0.4826,0.0644,0.0833,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.484
+2026-07-25,SEA@TEX,game_total,7.5,over,-101,0.529,0.5025,0.4795,0.0495,0.0528,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,SEA@TEX,game_total,7.5,under,-120,0.471,0.5455,0.5205,-0.0495,-0.1365,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,LAD@NYM,game_total,7.5,over,-102,0.5445,0.5049,0.4817,0.0628,0.0783,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,LAD@NYM,game_total,7.5,under,-119,0.4555,0.5434,0.5183,-0.0628,-0.1617,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,KC@DET,game_total,8.5,over,103,0.471,0.4926,0.4624,0.0086,-0.0439,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,KC@DET,game_total,8.5,under,-134,0.529,0.5726,0.5376,-0.0086,-0.0762,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,HOU@CWS,game_total,8.5,over,-114,0.465,0.5327,0.5098,-0.0448,-0.1271,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,HOU@CWS,game_total,8.5,under,-105,0.535,0.5122,0.4902,0.0448,0.0445,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,ATL@BAL,game_total,9.5,over,-101,0.451,0.5025,0.4804,-0.0294,-0.1025,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-25,ATL@BAL,game_total,9.5,under,-119,0.549,0.5434,0.5196,0.0294,0.0103,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.416
+2026-07-27,TOR@WSH,game_total,9.5,over,-115,0.5055,0.5349,0.5108,-0.0053,-0.0549,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,TOR@WSH,game_total,9.5,under,-105,0.4945,0.5122,0.4892,0.0053,-0.0345,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,MIL@SF,game_total,8.5,over,-105,0.511,0.5122,0.4902,0.0208,-0.0023,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,MIL@SF,game_total,8.5,under,-114,0.489,0.5327,0.5098,-0.0208,-0.082,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,AZ@PIT,game_total,9.5,over,-102,0.425,0.5049,0.4826,-0.0576,-0.1583,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,AZ@PIT,game_total,9.5,under,-118,0.575,0.5413,0.5174,0.0576,0.0623,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,PHI@MIA,game_total,7.5,over,-114,0.572,0.5327,0.5098,0.0622,0.0738,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,PHI@MIA,game_total,7.5,under,-105,0.428,0.5122,0.4902,-0.0622,-0.1644,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,BAL@DET,game_total,8.5,over,-111,0.441,0.5261,0.5022,-0.0612,-0.1617,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,BAL@DET,game_total,8.5,under,-109,0.559,0.5215,0.4978,0.0612,0.0718,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,CLE@CIN,game_total,8.5,over,-105,0.513,0.5122,0.4892,0.0238,0.0016,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324; void=no_result_ppd
+2026-07-27,CLE@CIN,game_total,8.5,under,-115,0.487,0.5349,0.5108,-0.0238,-0.0895,,totals_sim_v0.1.0,0,void,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324; void=no_result_ppd
+2026-07-27,NYY@CWS,game_total,8.5,over,-107,0.3875,0.5169,0.4946,-0.1071,-0.2503,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,NYY@CWS,game_total,8.5,under,-112,0.6125,0.5283,0.5054,0.1071,0.1594,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,BOS@ATH,game_total,9.5,over,-108,0.241,0.5192,0.4957,-0.2547,-0.5359,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,BOS@ATH,game_total,9.5,under,-112,0.759,0.5283,0.5043,0.2547,0.4367,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,CHC@STL,game_total,9.5,over,-116,0.436,0.537,0.513,-0.077,-0.1881,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.324
+2026-07-27,CHC@STL,game_total,9.5,under,-104,0.564,0.5098,0.487,0.077,0.1063,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.324
+2026-07-29,TOR@WSH,game_total,9.5,over,102,0.4315,0.495,0.4739,-0.0424,-0.1284,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,TOR@WSH,game_total,9.5,under,-122,0.5685,0.5495,0.5261,0.0424,0.0345,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,TEX@TB,game_total,7.5,over,-107,0.574,0.5169,0.4946,0.0794,0.1105,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.379
+2026-07-29,TEX@TB,game_total,7.5,under,-112,0.426,0.5283,0.5054,-0.0794,-0.1936,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.379
+2026-07-29,MIL@SF,game_total,7.5,over,-110,0.548,0.5238,0.5,0.048,0.0462,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,MIL@SF,game_total,7.5,under,-110,0.452,0.5238,0.5,-0.048,-0.1371,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,AZ@PIT,game_total,8.5,over,-104,0.3745,0.5098,0.488,-0.1135,-0.2654,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,AZ@PIT,game_total,8.5,under,-115,0.6255,0.5349,0.512,0.1135,0.1694,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,KC@MIN,game_total,8.5,over,-122,0.4575,0.5495,0.5248,-0.0673,-0.1675,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.379
+2026-07-29,KC@MIN,game_total,8.5,under,101,0.5425,0.4975,0.4752,0.0673,0.0904,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.379
+2026-07-29,PHI@MIA,game_total,7.5,over,-106,0.468,0.5146,0.4913,-0.0233,-0.0905,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,PHI@MIA,game_total,7.5,under,-114,0.532,0.5327,0.5087,0.0233,-0.0013,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.379
+2026-07-29,SEA@LAD,game_total,9.5,over,-111,0.4825,0.5261,0.5022,-0.0197,-0.0828,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,SEA@LAD,game_total,9.5,under,-109,0.5175,0.5215,0.4978,0.0197,-0.0077,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,HOU@LAA,game_total,9.5,over,-115,0.3945,0.5349,0.5108,-0.1163,-0.2624,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,HOU@LAA,game_total,9.5,under,-105,0.6055,0.5122,0.4892,0.1163,0.1822,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,BAL@DET,game_total,7.5,over,-105,0.3975,0.5122,0.4892,-0.0917,-0.2239,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,BAL@DET,game_total,7.5,under,-115,0.6025,0.5349,0.5108,0.0917,0.1264,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,NYY@CWS,game_total,7.5,over,-107,0.4895,0.5169,0.4935,-0.004,-0.053,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.379
+2026-07-29,NYY@CWS,game_total,7.5,under,-113,0.5105,0.5305,0.5065,0.004,-0.0377,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.379
+2026-07-29,BOS@ATH,game_total,10.5,over,-112,0.2625,0.5283,0.5054,-0.2429,-0.5031,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,BOS@ATH,game_total,10.5,under,-107,0.7375,0.5169,0.4946,0.2429,0.4268,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,ATL@NYM,game_total,8.5,over,-101,0.448,0.5025,0.4804,-0.0324,-0.1084,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-29,ATL@NYM,game_total,8.5,under,-119,0.552,0.5434,0.5196,0.0324,0.0158,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.377
+2026-07-30,TEX@TB,game_total,7.5,over,-110,0.4375,0.5238,0.5011,-0.0636,-0.1648,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.378
+2026-07-30,TEX@TB,game_total,7.5,under,-109,0.5625,0.5215,0.4989,0.0636,0.0785,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.378
+2026-07-30,PIT@CIN,game_total,9.5,over,-112,0.4695,0.5283,0.5043,-0.0348,-0.1113,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.378
+2026-07-30,PIT@CIN,game_total,9.5,under,-108,0.5305,0.5192,0.4957,0.0348,0.0217,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.378
+2026-07-30,NYY@CWS,game_total,7.5,over,-102,0.5065,0.5049,0.4817,0.0248,0.0031,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-30,NYY@CWS,game_total,7.5,under,-119,0.4935,0.5434,0.5183,-0.0248,-0.0918,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-30,WSH@ATL,game_total,9.5,over,-118,0.5155,0.5413,0.5174,-0.0019,-0.0476,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-30,WSH@ATL,game_total,9.5,under,-102,0.4845,0.5049,0.4826,0.0019,-0.0405,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-30,SF@SD,game_total,8.5,over,-104,0.5075,0.5098,0.488,0.0195,-0.0045,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-30,SF@SD,game_total,8.5,under,-115,0.4925,0.5349,0.512,-0.0195,-0.0792,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.342
+2026-07-31,STL@TOR,game_total,7.5,over,-110,0.559,0.5238,0.5,0.059,0.0672,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,STL@TOR,game_total,7.5,under,-110,0.441,0.5238,0.5,-0.059,-0.1581,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,CWS@TB,game_total,8.5,over,-102,0.5735,0.5049,0.4817,0.0918,0.1358,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,CWS@TB,game_total,8.5,under,-119,0.4265,0.5434,0.5183,-0.0918,-0.2151,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,SF@SD,game_total,8.5,over,-114,0.53,0.5327,0.5087,0.0213,-0.0051,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,SF@SD,game_total,8.5,under,-106,0.47,0.5146,0.4913,-0.0213,-0.0866,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,MIA@NYM,game_total,8.5,over,-105,0.5015,0.5122,0.4892,0.0123,-0.0209,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,MIA@NYM,game_total,8.5,under,-115,0.4985,0.5349,0.5108,-0.0123,-0.068,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,BOS@LAD,game_total,8.5,over,-120,0.5015,0.5455,0.5217,-0.0202,-0.0806,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,BOS@LAD,game_total,8.5,under,100,0.4985,0.5,0.4783,0.0202,-0.003,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,TEX@HOU,game_total,7.5,over,-114,0.5335,0.5327,0.5098,0.0237,0.0015,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,TEX@HOU,game_total,7.5,under,-105,0.4665,0.5122,0.4902,-0.0237,-0.0892,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,DET@ATH,game_total,10.5,over,-120,0.311,0.5455,0.5217,-0.2107,-0.4298,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,DET@ATH,game_total,10.5,under,100,0.689,0.5,0.4783,0.2107,0.378,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.267; void=no_result_ppd; void_corrected
+2026-07-31,PHI@BAL,game_total,8.5,over,-120,0.5725,0.5455,0.5217,0.0508,0.0496,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-07-31,PHI@BAL,game_total,8.5,under,100,0.4275,0.5,0.4783,-0.0508,-0.145,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.180; void=no_result_ppd; void_corrected
+2026-08-03,PIT@MIL,game_total,8.5,over,-105,0.3855,0.5122,0.4892,-0.1037,-0.2473,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.003
+2026-08-03,PIT@MIL,game_total,8.5,under,-115,0.6145,0.5349,0.5108,0.1037,0.1489,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.003
+2026-08-03,TB@COL,game_total,11.5,over,-103,0.2385,0.5074,0.4848,-0.2463,-0.5299,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.003
+2026-08-03,TB@COL,game_total,11.5,under,-117,0.7615,0.5392,0.5152,0.2463,0.4124,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.003
+2026-08-04,PIT@MIL,game_total,7.5,over,-104,0.4275,0.5098,0.487,-0.0595,-0.1615,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.003
+2026-08-04,PIT@MIL,game_total,7.5,under,-116,0.5725,0.537,0.513,0.0595,0.0661,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.003
+2026-08-04,TOR@HOU,game_total,8.5,over,-105,0.443,0.5122,0.4892,-0.0462,-0.1351,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,TOR@HOU,game_total,8.5,under,-115,0.557,0.5349,0.5108,0.0462,0.0414,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,NYM@CLE,game_total,7.5,over,-114,0.4395,0.5327,0.5098,-0.0703,-0.175,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,NYM@CLE,game_total,7.5,under,-105,0.5605,0.5122,0.4902,0.0703,0.0943,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,ATH@CIN,game_total,9.5,over,100,0.323,0.5,0.4783,-0.1553,-0.354,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,ATH@CIN,game_total,9.5,under,-120,0.677,0.5455,0.5217,0.1553,0.2411,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,SD@AZ,game_total,8.5,over,-122,0.4315,0.5495,0.5248,-0.0933,-0.2148,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.003
+2026-08-04,SD@AZ,game_total,8.5,under,101,0.5685,0.4975,0.4752,0.0933,0.1427,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.003
+2026-08-04,LAA@BAL,game_total,8.5,over,-122,0.3755,0.5495,0.5248,-0.1493,-0.3167,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-04,LAA@BAL,game_total,8.5,under,101,0.6245,0.4975,0.4752,0.1493,0.2552,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,SF@TEX,game_total,8.5,over,-102,0.3535,0.5049,0.4826,-0.1291,-0.2999,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,SF@TEX,game_total,8.5,under,-118,0.6465,0.5413,0.5174,0.1291,0.1944,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,DET@SEA,game_total,7.5,over,-113,0.436,0.5305,0.5065,-0.0705,-0.1781,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,DET@SEA,game_total,7.5,under,-107,0.564,0.5169,0.4935,0.0705,0.0911,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,WSH@PHI,game_total,9.5,over,-111,0.4415,0.5261,0.5022,-0.0607,-0.1608,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,WSH@PHI,game_total,9.5,under,-109,0.5585,0.5215,0.4978,0.0607,0.0709,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,STL@NYY,game_total,8.5,over,-119,0.508,0.5434,0.5183,-0.0103,-0.0651,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,STL@NYY,game_total,8.5,under,-102,0.492,0.5049,0.4817,0.0103,-0.0256,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,MIN@KC,game_total,8.5,over,-119,0.464,0.5434,0.5196,-0.0556,-0.1461,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,MIN@KC,game_total,8.5,under,-101,0.536,0.5025,0.4804,0.0556,0.0667,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,ATH@CIN,game_total,9.5,over,-113,0.3935,0.5305,0.5065,-0.113,-0.2583,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,ATH@CIN,game_total,9.5,under,-107,0.6065,0.5169,0.4935,0.113,0.1733,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,LAD@CHC,game_total,9.5,over,-104,0.4275,0.5098,0.488,-0.0605,-0.1615,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,LAD@CHC,game_total,9.5,under,-115,0.5725,0.5349,0.512,0.0605,0.0703,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,CWS@BOS,game_total,8.5,over,-102,0.48,0.5049,0.4817,-0.0017,-0.0494,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,CWS@BOS,game_total,8.5,under,-119,0.52,0.5434,0.5183,0.0017,-0.043,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,MIA@ATL,game_total,8.5,over,-116,0.4105,0.537,0.513,-0.1025,-0.2356,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.068
+2026-08-05,MIA@ATL,game_total,8.5,under,-104,0.5895,0.5098,0.487,0.1025,0.1563,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.068
+2026-08-06,PIT@MIL,game_total,7.5,over,-110,0.43,0.5238,0.5011,-0.0711,-0.1791,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.074
+2026-08-06,PIT@MIL,game_total,7.5,under,-109,0.57,0.5215,0.4989,0.0711,0.0929,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.074
+2026-08-06,ATH@CIN,game_total,9.5,over,-103,0.3565,0.5074,0.4848,-0.1283,-0.2974,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.074
+2026-08-06,ATH@CIN,game_total,9.5,under,-117,0.6435,0.5392,0.5152,0.1283,0.1935,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.074
+2026-08-06,TOR@CHC,game_total,7.5,over,-107,0.4525,0.5169,0.4935,-0.041,-0.1246,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.074
+2026-08-06,TOR@CHC,game_total,7.5,under,-113,0.5475,0.5305,0.5065,0.041,0.032,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.074
+2026-08-06,LAA@BAL,game_total,9.5,over,-114,0.3405,0.5327,0.5087,-0.1682,-0.3608,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.074
+2026-08-06,LAA@BAL,game_total,9.5,under,-106,0.6595,0.5146,0.4913,0.1682,0.2817,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.074
+2026-08-07,BAL@TEX,game_total,7.5,over,101,0.433,0.4975,0.4752,-0.0422,-0.1297,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,BAL@TEX,game_total,7.5,under,-122,0.567,0.5495,0.5248,0.0422,0.0318,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.063
+2026-08-07,COL@STL,game_total,8.5,over,-116,0.374,0.537,0.513,-0.139,-0.3036,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,COL@STL,game_total,8.5,under,-104,0.626,0.5098,0.487,0.139,0.2279,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.063
+2026-08-07,HOU@SD,game_total,8.5,over,-112,0.4,0.5283,0.5043,-0.1043,-0.2428,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,HOU@SD,game_total,8.5,under,-108,0.6,0.5192,0.4957,0.1043,0.1555,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.063
+2026-08-07,TOR@PHI,game_total,7.5,over,-118,0.5165,0.5413,0.5174,-0.0009,-0.0458,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,TOR@PHI,game_total,7.5,under,-102,0.4835,0.5049,0.4826,0.0009,-0.0425,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,CLE@CWS,game_total,7.5,over,-115,0.416,0.5349,0.512,-0.096,-0.2222,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,CLE@CWS,game_total,7.5,under,-104,0.584,0.5098,0.488,0.096,0.1455,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.063
+2026-08-07,ATH@BOS,game_total,8.5,over,-103,0.34,0.5074,0.4848,-0.1448,-0.3299,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.063
+2026-08-07,ATH@BOS,game_total,8.5,under,-117,0.66,0.5392,0.5152,0.1448,0.2241,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.063
+2026-08-07,CHC@KC,game_total,9.5,over,100,0.321,0.5,0.4783,-0.1573,-0.358,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.063
+2026-08-07,CHC@KC,game_total,9.5,under,-120,0.679,0.5455,0.5217,0.1573,0.2448,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.063
+2026-08-08,CIN@WSH,game_total,8.5,over,-115,0.338,0.5349,0.5108,-0.1728,-0.3681,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,CIN@WSH,game_total,8.5,under,-105,0.662,0.5122,0.4892,0.1728,0.2925,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,BAL@TEX,game_total,7.5,over,-102,0.4465,0.5049,0.4826,-0.0361,-0.1158,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,BAL@TEX,game_total,7.5,under,-118,0.5535,0.5413,0.5174,0.0361,0.0226,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,COL@STL,game_total,8.5,over,-113,0.4355,0.5305,0.5065,-0.071,-0.1791,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,COL@STL,game_total,8.5,under,-107,0.5645,0.5169,0.4935,0.071,0.0921,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,TOR@PHI,game_total,9.5,over,-109,0.364,0.5215,0.4978,-0.1338,-0.3021,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,TOR@PHI,game_total,9.5,under,-111,0.636,0.5261,0.5022,0.1338,0.209,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,ATL@NYY,game_total,7.5,over,-103,0.416,0.5074,0.4848,-0.0688,-0.1801,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,ATL@NYY,game_total,7.5,under,-117,0.584,0.5392,0.5152,0.0688,0.0831,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,LAA@MIA,game_total,7.5,over,100,0.4645,0.5,0.4783,-0.0138,-0.071,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,LAA@MIA,game_total,7.5,under,-120,0.5355,0.5455,0.5217,0.0138,-0.0183,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,CHC@KC,game_total,9.5,over,100,0.407,0.5,0.4783,-0.0713,-0.186,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,CHC@KC,game_total,9.5,under,-120,0.593,0.5455,0.5217,0.0713,0.0871,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,CLE@CWS,game_total,7.5,over,102,0.4345,0.495,0.4739,-0.0394,-0.1223,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,CLE@CWS,game_total,7.5,under,-122,0.5655,0.5495,0.5261,0.0394,0.029,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,LAD@AZ,game_total,8.5,over,-109,0.4635,0.5215,0.4978,-0.0343,-0.1113,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-08,LAD@AZ,game_total,8.5,under,-111,0.5365,0.5261,0.5022,0.0343,0.0198,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.067
+2026-08-10,BOS@TOR,game_total,8.5,over,-101,0.3915,0.5025,0.4804,-0.0889,-0.2209,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,BOS@TOR,game_total,8.5,under,-119,0.6085,0.5434,0.5196,0.0889,0.1198,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.066
+2026-08-10,HOU@SF,game_total,8.5,over,-106,0.469,0.5146,0.4913,-0.0223,-0.0885,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,HOU@SF,game_total,8.5,under,-114,0.531,0.5327,0.5087,0.0223,-0.0032,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,MIL@SD,game_total,7.5,over,102,0.473,0.495,0.473,0.0,-0.0445,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,MIL@SD,game_total,7.5,under,-123,0.527,0.5516,0.527,-0.0,-0.0445,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,BAL@MIN,game_total,8.5,over,-107,0.377,0.5169,0.4935,-0.1165,-0.2707,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,BAL@MIN,game_total,8.5,under,-113,0.623,0.5305,0.5065,0.1165,0.1744,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=-0.066
+2026-08-10,KC@LAD,game_total,7.5,over,101,0.4525,0.4975,0.4752,-0.0227,-0.0905,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,KC@LAD,game_total,7.5,under,-122,0.5475,0.5495,0.5248,0.0227,-0.0037,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,NYM@ATL,game_total,8.5,over,-108,0.4785,0.5192,0.4957,-0.0172,-0.0785,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-10,NYM@ATL,game_total,8.5,under,-112,0.5215,0.5283,0.5043,0.0172,-0.0129,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=-0.066
+2026-08-11,MIL@SD,game_total,7.5,over,-108,0.513,0.5192,0.4957,0.0173,-0.012,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,MIL@SD,game_total,7.5,under,-112,0.487,0.5283,0.5043,-0.0173,-0.0782,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,BAL@MIN,game_total,9.5,over,-105,0.3985,0.5122,0.4902,-0.0917,-0.222,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,BAL@MIN,game_total,9.5,under,-114,0.6015,0.5327,0.5098,0.0917,0.1291,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,KC@LAD,game_total,8.5,over,-106,0.3615,0.5146,0.4913,-0.1298,-0.2975,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,KC@LAD,game_total,8.5,under,-114,0.6385,0.5327,0.5087,0.1298,0.1986,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,CIN@CWS,game_total,7.5,over,-114,0.4525,0.5327,0.5098,-0.0573,-0.1506,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,CIN@CWS,game_total,7.5,under,-105,0.5475,0.5122,0.4902,0.0573,0.0689,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,NYM@ATL,game_total,8.5,over,-111,0.472,0.5261,0.5022,-0.0302,-0.1028,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,NYM@ATL,game_total,8.5,under,-109,0.528,0.5215,0.4978,0.0302,0.0124,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,TB@ATH,game_total,10.5,over,-105,0.2955,0.5122,0.4892,-0.1937,-0.4231,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.012
+2026-08-11,TB@ATH,game_total,10.5,under,-115,0.7045,0.5349,0.5108,0.1937,0.3171,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.012
+2026-08-12,HOU@SF,game_total,8.5,over,-105,0.3715,0.5122,0.4892,-0.1177,-0.2747,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,HOU@SF,game_total,8.5,under,-115,0.6285,0.5349,0.5108,0.1177,0.175,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,SEA@NYY,game_total,8.5,over,-120,0.4925,0.5455,0.5205,-0.028,-0.0971,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,SEA@NYY,game_total,8.5,under,-101,0.5075,0.5025,0.4795,0.028,0.01,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,CIN@CWS,game_total,8.5,over,-122,0.373,0.5495,0.5248,-0.1518,-0.3213,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,CIN@CWS,game_total,8.5,under,101,0.627,0.4975,0.4752,0.1518,0.2603,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,TB@ATH,game_total,9.5,over,-101,0.2175,0.5025,0.4795,-0.262,-0.5672,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=-0.018
+2026-08-12,TB@ATH,game_total,9.5,under,-120,0.7825,0.5455,0.5205,0.262,0.4346,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=-0.018
+2026-08-13,CHC@WSH,game_total,8.5,over,-120,0.3945,0.5455,0.5217,-0.1272,-0.2768,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,CHC@WSH,game_total,8.5,under,100,0.6055,0.5,0.4783,0.1272,0.211,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,SEA@NYY,game_total,7.5,over,-108,0.462,0.5192,0.4957,-0.0337,-0.1102,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,SEA@NYY,game_total,7.5,under,-112,0.538,0.5283,0.5043,0.0337,0.0184,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,PHI@MIN,game_total,8.5,over,-110,0.475,0.5238,0.5,-0.025,-0.0932,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,PHI@MIN,game_total,8.5,under,-110,0.525,0.5238,0.5,0.025,0.0023,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,MIL@LAD,game_total,8.5,over,-105,0.4215,0.5122,0.4892,-0.0677,-0.1771,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,MIL@LAD,game_total,8.5,under,-115,0.5785,0.5349,0.5108,0.0677,0.0816,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,TEX@LAA,game_total,7.5,over,-105,0.3705,0.5122,0.4892,-0.1187,-0.2766,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,TEX@LAA,game_total,7.5,under,-115,0.6295,0.5349,0.5108,0.1187,0.1769,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,CIN@CWS,game_total,8.5,over,-105,0.4035,0.5122,0.4892,-0.0857,-0.2122,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-13,CIN@CWS,game_total,8.5,under,-115,0.5965,0.5349,0.5108,0.0857,0.1152,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.018
+2026-08-14,NYY@TOR,game_total,7.5,over,-119,0.538,0.5434,0.5196,0.0184,-0.0099,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,NYY@TOR,game_total,7.5,under,-101,0.462,0.5025,0.4804,-0.0184,-0.0806,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,COL@SF,game_total,7.5,over,-112,0.4685,0.5283,0.5054,-0.0369,-0.1132,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,COL@SF,game_total,7.5,under,-107,0.5315,0.5169,0.4946,0.0369,0.0282,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,WSH@NYM,game_total,8.5,over,-112,0.4535,0.5283,0.5054,-0.0519,-0.1416,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,WSH@NYM,game_total,8.5,under,-107,0.5465,0.5169,0.4946,0.0519,0.0573,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,MIL@LAD,game_total,7.5,over,-118,0.5595,0.5413,0.5174,0.0421,0.0337,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,MIL@LAD,game_total,7.5,under,-102,0.4405,0.5049,0.4826,-0.0421,-0.1276,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,KC@LAA,game_total,8.5,over,-108,0.4675,0.5192,0.4957,-0.0282,-0.0996,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,KC@LAA,game_total,8.5,under,-112,0.5325,0.5283,0.5043,0.0282,0.008,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,CWS@DET,game_total,8.5,over,-120,0.3525,0.5455,0.5217,-0.1692,-0.3538,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,CWS@DET,game_total,8.5,under,100,0.6475,0.5,0.4783,0.1692,0.295,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,SD@CLE,game_total,7.5,over,100,0.4445,0.5,0.4783,-0.0338,-0.111,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-14,SD@CLE,game_total,7.5,under,-120,0.5555,0.5455,0.5217,0.0338,0.0184,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.028
+2026-08-15,NYY@TOR,game_total,7.5,over,100,0.4605,0.5,0.4783,-0.0178,-0.079,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,NYY@TOR,game_total,7.5,under,-120,0.5395,0.5455,0.5217,0.0178,-0.0109,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,BAL@TB,game_total,7.5,over,101,0.481,0.4975,0.4752,0.0058,-0.0332,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,BAL@TB,game_total,7.5,under,-122,0.519,0.5495,0.5248,-0.0058,-0.0556,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,COL@SF,game_total,7.5,over,-117,0.5065,0.5392,0.5152,-0.0087,-0.0606,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,COL@SF,game_total,7.5,under,-103,0.4935,0.5074,0.4848,0.0087,-0.0274,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,BOS@PIT,game_total,7.5,over,-115,0.4145,0.5349,0.5108,-0.0963,-0.2251,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,BOS@PIT,game_total,7.5,under,-105,0.5855,0.5122,0.4892,0.0963,0.1431,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.018
+2026-08-15,MIL@LAD,game_total,7.5,over,-102,0.2965,0.5049,0.4826,-0.1861,-0.4128,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,MIL@LAD,game_total,7.5,under,-118,0.7035,0.5413,0.5174,0.1861,0.2997,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.018
+2026-08-15,SEA@HOU,game_total,8.5,over,-116,0.4355,0.537,0.513,-0.0775,-0.1891,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,SEA@HOU,game_total,8.5,under,-104,0.5645,0.5098,0.487,0.0775,0.1073,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.018
+2026-08-15,CWS@DET,game_total,7.5,over,-118,0.4815,0.5413,0.5174,-0.0359,-0.1104,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-15,CWS@DET,game_total,7.5,under,-102,0.5185,0.5049,0.4826,0.0359,0.0268,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-15,TEX@ATH,game_total,9.5,over,101,0.252,0.4975,0.4752,-0.2232,-0.4935,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.018
+2026-08-15,TEX@ATH,game_total,9.5,under,-122,0.748,0.5495,0.5248,0.2232,0.3611,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.018
+2026-08-15,SD@CLE,game_total,8.5,over,-105,0.367,0.5122,0.4902,-0.1232,-0.2835,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.018
+2026-08-15,SD@CLE,game_total,8.5,under,-114,0.633,0.5327,0.5098,0.1232,0.1883,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.018
+2026-08-17,BAL@TB,game_total,7.5,over,-117,0.491,0.5392,0.5152,-0.0242,-0.0893,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.067
+2026-08-17,BAL@TB,game_total,7.5,under,-103,0.509,0.5074,0.4848,0.0242,0.0032,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.067
+2026-08-17,LAD@COL,game_total,10.5,over,-120,0.352,0.5455,0.5217,-0.1697,-0.3547,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.067
+2026-08-17,LAD@COL,game_total,10.5,under,100,0.648,0.5,0.4783,0.1697,0.296,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.067
+2026-08-17,STL@CIN,game_total,9.5,over,100,0.4655,0.5,0.4783,-0.0128,-0.069,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.067
+2026-08-17,STL@CIN,game_total,9.5,under,-120,0.5345,0.5455,0.5217,0.0128,-0.0201,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.067
+2026-08-18,TOR@TB,game_total,7.5,over,-108,0.546,0.5192,0.4967,0.0493,0.0515,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,TOR@TB,game_total,7.5,under,-111,0.454,0.5261,0.5033,-0.0493,-0.137,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,ATL@MIN,game_total,8.5,over,-122,0.497,0.5495,0.5261,-0.0291,-0.0956,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,ATL@MIN,game_total,8.5,under,102,0.503,0.495,0.4739,0.0291,0.0161,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,SEA@MIL,game_total,7.5,over,-114,0.475,0.5327,0.5098,-0.0348,-0.1083,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,SEA@MIL,game_total,7.5,under,-105,0.525,0.5122,0.4902,0.0348,0.025,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,LAD@COL,game_total,11.5,over,-114,0.305,0.5327,0.5087,-0.2037,-0.4275,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.108
+2026-08-18,LAD@COL,game_total,11.5,under,-106,0.695,0.5146,0.4913,0.2037,0.3507,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.108
+2026-08-18,STL@CIN,game_total,8.5,over,-117,0.5255,0.5392,0.5152,0.0103,-0.0254,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,STL@CIN,game_total,8.5,under,-103,0.4745,0.5074,0.4848,-0.0103,-0.0648,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,NYY@BAL,game_total,8.5,over,-115,0.4035,0.5349,0.5108,-0.1073,-0.2456,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,NYY@BAL,game_total,8.5,under,-105,0.5965,0.5122,0.4892,0.1073,0.1646,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,ATH@KC,game_total,9.5,over,-108,0.298,0.5192,0.4957,-0.1977,-0.4261,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.108
+2026-08-18,ATH@KC,game_total,9.5,under,-112,0.702,0.5283,0.5043,0.1977,0.3288,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.108
+2026-08-19,WSH@TEX,game_total,7.5,over,-114,0.507,0.5327,0.5098,-0.0028,-0.0483,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,WSH@TEX,game_total,7.5,under,-105,0.493,0.5122,0.4902,0.0028,-0.0375,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,TOR@TB,game_total,7.5,over,-101,0.4575,0.5025,0.4804,-0.0229,-0.0895,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,TOR@TB,game_total,7.5,under,-119,0.5425,0.5434,0.5196,0.0229,-0.0016,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,MIA@PHI,game_total,8.5,over,-112,0.4105,0.5283,0.5043,-0.0938,-0.223,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,MIA@PHI,game_total,8.5,under,-108,0.5895,0.5192,0.4957,0.0938,0.1353,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,SD@NYM,game_total,8.5,over,-114,0.4085,0.5327,0.5098,-0.1013,-0.2332,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.095
+2026-08-19,SD@NYM,game_total,8.5,under,-105,0.5915,0.5122,0.4902,0.1013,0.1548,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.095
+2026-08-19,ATL@MIN,game_total,8.5,over,-117,0.421,0.5392,0.5152,-0.0942,-0.2192,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,ATL@MIN,game_total,8.5,under,-103,0.579,0.5074,0.4848,0.0942,0.1412,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,LAD@COL,game_total,11.5,over,-102,0.3395,0.5049,0.4817,-0.1422,-0.3277,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,LAD@COL,game_total,11.5,under,-119,0.6605,0.5434,0.5183,0.1422,0.2155,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,STL@CIN,game_total,8.5,over,-103,0.4085,0.5074,0.4848,-0.0763,-0.1949,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,STL@CIN,game_total,8.5,under,-117,0.5915,0.5392,0.5152,0.0763,0.0971,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,ATH@KC,game_total,8.5,over,-105,0.4295,0.5122,0.4892,-0.0597,-0.1614,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.131
+2026-08-19,ATH@KC,game_total,8.5,under,-115,0.5705,0.5349,0.5108,0.0597,0.0666,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.131
+2026-08-20,WSH@TEX,game_total,7.5,over,-112,0.388,0.5283,0.5054,-0.1174,-0.2656,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,WSH@TEX,game_total,7.5,under,-107,0.612,0.5169,0.4946,0.1174,0.184,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,LAA@HOU,game_total,8.5,over,-105,0.4245,0.5122,0.4892,-0.0647,-0.1712,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,LAA@HOU,game_total,8.5,under,-115,0.5755,0.5349,0.5108,0.0647,0.076,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,ATL@CWS,game_total,8.5,over,-115,0.5055,0.5349,0.5108,-0.0053,-0.0549,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,ATL@CWS,game_total,8.5,under,-105,0.4945,0.5122,0.4892,0.0053,-0.0345,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,NYY@BAL,game_total,7.5,over,-112,0.4615,0.5283,0.5043,-0.0428,-0.1264,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.076
+2026-08-20,NYY@BAL,game_total,7.5,under,-108,0.5385,0.5192,0.4957,0.0428,0.0371,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.076
+2026-08-21,LAA@TEX,game_total,7.5,over,101,0.323,0.4975,0.4761,-0.1531,-0.3508,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,LAA@TEX,game_total,7.5,under,-121,0.677,0.5475,0.5239,0.1531,0.2365,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-21,WSH@MIA,game_total,7.5,over,-117,0.566,0.5392,0.5152,0.0508,0.0498,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-21,WSH@MIA,game_total,7.5,under,-103,0.434,0.5074,0.4848,-0.0508,-0.1446,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,DET@KC,game_total,8.5,over,-101,0.409,0.5025,0.4804,-0.0714,-0.186,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,DET@KC,game_total,8.5,under,-119,0.591,0.5434,0.5196,0.0714,0.0876,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-21,CLE@COL,game_total,10.5,over,-112,0.237,0.5283,0.5043,-0.2673,-0.5514,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,CLE@COL,game_total,10.5,under,-108,0.763,0.5192,0.4957,0.2673,0.4695,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-21,SF@BOS,game_total,7.5,over,-101,0.5525,0.5025,0.4804,0.0721,0.0995,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-21,SF@BOS,game_total,7.5,under,-119,0.4475,0.5434,0.5196,-0.0721,-0.1765,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,CIN@AZ,game_total,8.5,over,-102,0.415,0.5049,0.4826,-0.0676,-0.1781,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.075
+2026-08-21,CIN@AZ,game_total,8.5,under,-118,0.585,0.5413,0.5174,0.0676,0.0808,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.075
+2026-08-22,MIN@SD,game_total,8.5,over,-103,0.4775,0.5074,0.4848,-0.0073,-0.0589,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.119
+2026-08-22,MIN@SD,game_total,8.5,under,-117,0.5225,0.5392,0.5152,0.0073,-0.0309,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.119
+2026-08-22,ATL@MIL,game_total,8.5,over,-113,0.4765,0.5305,0.4979,-0.0214,-0.1018,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.119
+2026-08-22,ATL@MIL,game_total,8.5,under,-115,0.5235,0.5349,0.5021,0.0214,-0.0213,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.119
+2026-08-22,WSH@MIA,game_total,7.5,over,-103,0.4925,0.5074,0.4848,0.0077,-0.0293,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.119
+2026-08-22,WSH@MIA,game_total,7.5,under,-117,0.5075,0.5392,0.5152,-0.0077,-0.0587,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.119
+2026-08-22,PIT@LAD,game_total,7.5,over,-112,0.292,0.5283,0.5043,-0.2123,-0.4473,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.119
+2026-08-22,PIT@LAD,game_total,7.5,under,-108,0.708,0.5192,0.4957,0.2123,0.3635,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.119
+2026-08-22,DET@KC,game_total,8.5,over,-109,0.4265,0.5215,0.4989,-0.0724,-0.1822,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.119
+2026-08-22,DET@KC,game_total,8.5,under,-110,0.5735,0.5238,0.5011,0.0724,0.0949,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.119
+2026-08-22,NYM@CWS,game_total,8.5,over,-114,0.366,0.5327,0.5087,-0.1427,-0.3129,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.119
+2026-08-22,NYM@CWS,game_total,8.5,under,-106,0.634,0.5146,0.4913,0.1427,0.2321,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.119
+2026-08-23,CHC@SEA,game_total,7.5,over,-107,0.4775,0.5169,0.4946,-0.0171,-0.0762,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,CHC@SEA,game_total,7.5,under,-112,0.5225,0.5283,0.5054,0.0171,-0.011,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,ATL@MIL,game_total,7.5,over,-110,0.562,0.5238,0.5,0.062,0.0729,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.125
+2026-08-23,ATL@MIL,game_total,7.5,under,-110,0.438,0.5238,0.5,-0.062,-0.1638,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.125
+2026-08-23,PIT@LAD,game_total,8.5,over,-112,0.3435,0.5283,0.5043,-0.1608,-0.3498,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,PIT@LAD,game_total,8.5,under,-108,0.6565,0.5192,0.4957,0.1608,0.2644,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,DET@KC,game_total,8.5,over,-112,0.396,0.5283,0.5043,-0.1083,-0.2504,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,DET@KC,game_total,8.5,under,-108,0.604,0.5192,0.4957,0.1083,0.1632,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,NYM@CWS,game_total,8.5,over,-103,0.398,0.5074,0.4848,-0.0868,-0.2156,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.125
+2026-08-23,NYM@CWS,game_total,8.5,under,-117,0.602,0.5392,0.5152,0.0868,0.1165,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.125
+2026-08-24,PHI@SEA,game_total,6.5,over,-122,0.522,0.5495,0.5261,-0.0041,-0.0501,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.204
+2026-08-24,PHI@SEA,game_total,6.5,under,102,0.478,0.495,0.4739,0.0041,-0.0344,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.204
+2026-08-24,PIT@SD,game_total,7.5,over,-105,0.4105,0.5122,0.4892,-0.0787,-0.1985,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.204
+2026-08-24,PIT@SD,game_total,7.5,under,-115,0.5895,0.5349,0.5108,0.0787,0.1021,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.204
+2026-08-24,TB@DET,game_total,7.5,over,-115,0.369,0.5349,0.5108,-0.1418,-0.3101,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.204
+2026-08-24,TB@DET,game_total,7.5,under,-105,0.631,0.5122,0.4892,0.1418,0.232,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.204
+2026-08-25,KC@TOR,game_total,8.5,over,-120,0.44,0.5455,0.5217,-0.0817,-0.1933,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,KC@TOR,game_total,8.5,under,100,0.56,0.5,0.4783,0.0817,0.12,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.295
+2026-08-25,PHI@SEA,game_total,7.5,over,-108,0.5055,0.5192,0.4957,0.0098,-0.0265,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,PHI@SEA,game_total,7.5,under,-112,0.4945,0.5283,0.5043,-0.0098,-0.064,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,TB@DET,game_total,7.5,over,-105,0.436,0.5122,0.4902,-0.0542,-0.1488,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,TB@DET,game_total,7.5,under,-114,0.564,0.5327,0.5098,0.0542,0.0587,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.295
+2026-08-25,TEX@CWS,game_total,7.5,over,103,0.4645,0.4926,0.47,-0.0055,-0.0571,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,TEX@CWS,game_total,7.5,under,-125,0.5355,0.5556,0.53,0.0055,-0.0361,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,LAD@ATL,game_total,8.5,over,-119,0.409,0.5434,0.5196,-0.1106,-0.2473,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,LAD@ATL,game_total,8.5,under,-101,0.591,0.5025,0.4804,0.1106,0.1761,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.295
+2026-08-25,CHC@AZ,game_total,8.5,over,-105,0.5215,0.5122,0.4892,0.0323,0.0182,,totals_sim_v0.1.0,0,win,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-25,CHC@AZ,game_total,8.5,under,-115,0.4785,0.5349,0.5108,-0.0323,-0.1054,,totals_sim_v0.1.0,0,loss,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.295
+2026-08-26,KC@TOR,game_total,8.5,over,-116,0.517,0.537,0.513,0.004,-0.0373,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.308
+2026-08-26,KC@TOR,game_total,8.5,under,-104,0.483,0.5098,0.487,-0.004,-0.0526,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.308
+2026-08-26,BAL@STL,game_total,8.5,over,-105,0.4535,0.5122,0.4892,-0.0357,-0.1146,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,BAL@STL,game_total,8.5,under,-115,0.5465,0.5349,0.5108,0.0357,0.0217,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,CIN@SF,game_total,6.5,over,-139,0.451,0.5816,0.5463,-0.0953,-0.2246,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,CIN@SF,game_total,6.5,under,107,0.549,0.4831,0.4537,0.0953,0.1364,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,PIT@SD,game_total,8.5,over,-102,0.4375,0.5049,0.4817,-0.0442,-0.1336,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,PIT@SD,game_total,8.5,under,-119,0.5625,0.5434,0.5183,0.0442,0.0352,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,MIL@NYM,game_total,8.5,over,-102,0.375,0.5049,0.4817,-0.1067,-0.2573,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.308
+2026-08-26,MIL@NYM,game_total,8.5,under,-119,0.625,0.5434,0.5183,0.1067,0.1502,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.308
+2026-08-26,BOS@MIA,game_total,7.5,over,-114,0.5,0.5327,0.5098,-0.0098,-0.0614,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,BOS@MIA,game_total,7.5,under,-105,0.5,0.5122,0.4902,0.0098,-0.0238,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,CLE@LAA,game_total,8.5,over,-102,0.2875,0.5049,0.4826,-0.1951,-0.4306,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,CLE@LAA,game_total,8.5,under,-118,0.7125,0.5413,0.5174,0.1951,0.3163,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,LAD@ATL,game_total,8.5,over,-120,0.5015,0.5455,0.5205,-0.019,-0.0806,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,LAD@ATL,game_total,8.5,under,-101,0.4985,0.5025,0.4795,0.019,-0.0079,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,MIN@ATH,game_total,10.5,over,-104,0.1955,0.5098,0.487,-0.2915,-0.6165,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=projected; runenv_delta=+0.308
+2026-08-26,MIN@ATH,game_total,10.5,under,-116,0.8045,0.537,0.513,0.2915,0.4981,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=projected; runenv_delta=+0.308
+2026-08-26,CHC@AZ,game_total,7.5,over,100,0.557,0.5,0.4694,0.0876,0.114,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=True; lineup=confirmed; runenv_delta=+0.308
+2026-08-26,CHC@AZ,game_total,7.5,under,-130,0.443,0.5652,0.5306,-0.0876,-0.2162,,totals_sim_v0.1.0,0,,,,,book=draftkings; flagged=False; lineup=confirmed; runenv_delta=+0.308

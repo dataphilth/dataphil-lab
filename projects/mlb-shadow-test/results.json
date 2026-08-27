@@ -1,0 +1,229 @@
+{
+  "window": {
+    "start": "2026-06-01",
+    "end": "2026-08-26"
+  },
+  "counts": {
+    "rows_logged": 11950,
+    "settled": 10928,
+    "void": 877,
+    "unsettled": 145,
+    "prop_mix": {
+      "H_over_0.5": 10821,
+      "HRR_over_1.5": 107
+    }
+  },
+  "aggregate": {
+    "predicted": 0.6228,
+    "observed": 0.5963,
+    "brier": 0.2392
+  },
+  "gate": {
+    "definition": "legs placed on/after 2026-06-16 that the model flagged at >= 5% edge",
+    "target_n": 1200,
+    "n": 2749,
+    "observed": 0.5817,
+    "predicted": 0.6458,
+    "roi": -3.69,
+    "roi_se": 1.59,
+    "verdict": "FAILED"
+  },
+  "calibration": [
+    {
+      "lo": 0.42,
+      "hi": 0.48,
+      "n": 107,
+      "predicted": 0.4563,
+      "observed": 0.4766
+    },
+    {
+      "lo": 0.48,
+      "hi": 0.54,
+      "n": 766,
+      "predicted": 0.5181,
+      "observed": 0.5
+    },
+    {
+      "lo": 0.54,
+      "hi": 0.6,
+      "n": 2715,
+      "predicted": 0.5742,
+      "observed": 0.5576
+    },
+    {
+      "lo": 0.6,
+      "hi": 0.66,
+      "n": 4264,
+      "predicted": 0.6302,
+      "observed": 0.5999
+    },
+    {
+      "lo": 0.66,
+      "hi": 0.72,
+      "n": 2694,
+      "predicted": 0.6846,
+      "observed": 0.6518
+    },
+    {
+      "lo": 0.72,
+      "hi": 0.78,
+      "n": 342,
+      "predicted": 0.7363,
+      "observed": 0.6754
+    }
+  ],
+  "edge_deciles": [
+    {
+      "decile": 1,
+      "n": 1093,
+      "edge_mid": -0.0492,
+      "predicted": 0.5684,
+      "observed": 0.6084,
+      "roi": -7.88,
+      "roi_se": 2.26
+    },
+    {
+      "decile": 2,
+      "n": 1093,
+      "edge_mid": -0.0174,
+      "predicted": 0.6011,
+      "observed": 0.5865,
+      "roi": -11.16,
+      "roi_se": 2.28
+    },
+    {
+      "decile": 3,
+      "n": 1093,
+      "edge_mid": -0.0016,
+      "predicted": 0.6104,
+      "observed": 0.6167,
+      "roi": -5.85,
+      "roi_se": 2.27
+    },
+    {
+      "decile": 4,
+      "n": 1093,
+      "edge_mid": 0.0106,
+      "predicted": 0.622,
+      "observed": 0.6102,
+      "roi": -6.62,
+      "roi_se": 2.28
+    },
+    {
+      "decile": 5,
+      "n": 1092,
+      "edge_mid": 0.0211,
+      "predicted": 0.6264,
+      "observed": 0.6154,
+      "roi": -4.8,
+      "roi_se": 2.3
+    },
+    {
+      "decile": 6,
+      "n": 1093,
+      "edge_mid": 0.0318,
+      "predicted": 0.6296,
+      "observed": 0.6002,
+      "roi": -6.34,
+      "roi_se": 2.34
+    },
+    {
+      "decile": 7,
+      "n": 1093,
+      "edge_mid": 0.0428,
+      "predicted": 0.6377,
+      "observed": 0.6057,
+      "roi": -4.3,
+      "roi_se": 2.36
+    },
+    {
+      "decile": 8,
+      "n": 1093,
+      "edge_mid": 0.0556,
+      "predicted": 0.6402,
+      "observed": 0.5892,
+      "roi": -5.68,
+      "roi_se": 2.41
+    },
+    {
+      "decile": 9,
+      "n": 1093,
+      "edge_mid": 0.0722,
+      "predicted": 0.645,
+      "observed": 0.5901,
+      "roi": -3.67,
+      "roi_se": 2.46
+    },
+    {
+      "decile": 10,
+      "n": 1092,
+      "edge_mid": 0.1202,
+      "predicted": 0.6472,
+      "observed": 0.5403,
+      "roi": -3.87,
+      "roi_se": 2.79
+    }
+  ],
+  "horse_race": {
+    "n": 10928,
+    "coefficients": {
+      "intercept": {
+        "beta": -0.0393,
+        "se": 0.0439,
+        "z": -0.9
+      },
+      "logit_p_model": {
+        "beta": 0.2313,
+        "se": 0.1053,
+        "z": 2.2
+      },
+      "logit_p_market": {
+        "beta": 0.8201,
+        "se": 0.1027,
+        "z": 7.98
+      }
+    },
+    "implied_model_weight": 0.22,
+    "brier": {
+      "model": 0.2392,
+      "market": 0.2371,
+      "naive_50_50_blend": 0.2374
+    },
+    "log_loss": {
+      "model": 0.6715,
+      "market": 0.6669
+    }
+  },
+  "monthly_drift": [
+    {
+      "month": "2026-06",
+      "n": 384,
+      "observed": 0.612,
+      "predicted": 0.6377,
+      "roi": 2.17,
+      "roi_se": 4.22
+    },
+    {
+      "month": "2026-07",
+      "n": 1233,
+      "observed": 0.5831,
+      "predicted": 0.6501,
+      "roi": -3.35,
+      "roi_se": 2.39
+    },
+    {
+      "month": "2026-08",
+      "n": 1132,
+      "observed": 0.5698,
+      "predicted": 0.6439,
+      "roi": -6.05,
+      "roi_se": 2.46
+    }
+  ],
+  "clv": {
+    "n_nonzero": 964,
+    "mean_pct": 0.0019,
+    "n_high_edge": 289,
+    "mean_pct_high_edge": 0.0089
+  }
+}

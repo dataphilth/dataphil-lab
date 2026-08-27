@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A pre-registered 87-day out-of-sample test of an MLB prop model: 10,928 settled predictions, a failed gate, and the regression that diagnosed why.">
+<meta name="author" content="Phil Alexander">
+<meta property="og:type" content="website">
+<meta property="og:description" content="A pre-registered 87-day out-of-sample test of an MLB prop model: 10,928 settled predictions, a failed gate, and the regression that diagnosed why.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%BE</text></svg>">
+<title>The Model That Didn't Ship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:    #f6f7f8;
+    --surface:   #ffffff;
+    --ink:       #14181d;
+    --ink-soft:  #3d4750;
+    --muted:     #67737e;
+    --rule:      #dde2e6;
+    --rule-soft: #eaeef1;
+    --steel:     #2f5d7c;
+    --brick:     #a3332a;
+    --brick-dim: rgba(163, 51, 42, 0.10);
+    --steel-dim: rgba(47, 93, 124, 0.09);
+
+    --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --body:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --measure: 66ch;
+    --wide:    62rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:    #0d1115;
+      --surface:   #151b21;
+      --ink:       #e7ebee;
+      --ink-soft:  #c2cbd3;
+      --muted:     #8b98a4;
+      --rule:      #262e36;
+      --rule-soft: #1d242b;
+      --steel:     #79aacd;
+      --brick:     #d97a6d;
+      --brick-dim: rgba(217, 122, 109, 0.13);
+      --steel-dim: rgba(121, 170, 205, 0.11);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:    #0d1115;
+    --surface:   #151b21;
+    --ink:       #e7ebee;
+    --ink-soft:  #c2cbd3;
+    --muted:     #8b98a4;
+    --rule:      #262e36;
+    --rule-soft: #1d242b;
+    --steel:     #79aacd;
+    --brick:     #d97a6d;
+    --brick-dim: rgba(217, 122, 109, 0.13);
+    --steel-dim: rgba(121, 170, 205, 0.11);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0 1.5rem 6rem;
+  }
+
+  .shell { max-width: var(--wide); margin: 0 auto; }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    padding: 4.5rem 0 2rem;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .kicker {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 4.1rem);
+    line-height: 1.04;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+    margin: 0 0 1.4rem;
+    max-width: 20ch;
+  }
+
+  .standfirst {
+    font-family: var(--display);
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 54ch;
+    margin: 0 0 2.6rem;
+  }
+
+  /* ---------- stat line ---------- */
+
+  .statline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 1rem 1.1rem 1.05rem;
+  }
+
+  .stat dt {
+    font-family: var(--mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.45rem;
+  }
+
+  .stat dd {
+    margin: 0;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.42rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .stat dd small {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+
+  .neg { color: var(--brick); }
+
+  /* ---------- verdict stamp ---------- */
+
+  .stamp {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border: 2px solid var(--brick);
+    color: var(--brick);
+    background: var(--brick-dim);
+    padding: 0.85rem 1.4rem;
+    font-family: var(--mono);
+    margin-bottom: 3rem;
+  }
+
+  .stamp b {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .stamp span {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- findings ---------- */
+
+  section { padding: 3.6rem 0 0; }
+
+  .finding-head {
+    display: grid;
+    grid-template-columns: 3.6rem 1fr;
+    gap: 0 1.1rem;
+    align-items: baseline;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+    margin-bottom: 1.9rem;
+  }
+
+  .finding-num {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--brick);
+    padding-top: 0.55rem;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.4vw, 2.25rem);
+    line-height: 1.16;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    margin: 0;
+    max-width: 26ch;
+  }
+
+  h3 {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    margin: 2.4rem 0 0.7rem;
+  }
+
+  p { max-width: var(--measure); margin: 0 0 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .prose { padding-left: 4.7rem; }
+  @media (max-width: 40rem) {
+    .prose { padding-left: 0; }
+    .finding-head { grid-template-columns: 1fr; gap: 0.5rem; }
+    .finding-num { padding-top: 0; }
+  }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+
+  .lede {
+    font-family: var(--display);
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  code, .num {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9em;
+  }
+
+  blockquote {
+    margin: 1.8rem 0 1.8rem;
+    padding: 0 0 0 1.3rem;
+    border-left: 2px solid var(--steel);
+    max-width: var(--measure);
+    color: var(--ink-soft);
+    font-family: var(--display);
+    font-size: 1.05rem;
+    line-height: 1.56;
+  }
+
+  /* ---------- exhibits ---------- */
+
+  figure {
+    margin: 2.4rem 0;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 1.6rem 1.6rem 1.2rem;
+  }
+
+  figure svg { display: block; width: 100%; height: auto; }
+  figure svg text { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  figure svg text.lbl { font-family: var(--body); font-variant-numeric: normal; }
+
+  figcaption {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--muted);
+    border-top: 1px solid var(--rule-soft);
+    margin-top: 1.1rem;
+    padding-top: 0.85rem;
+    max-width: 64ch;
+  }
+
+  figcaption b { color: var(--ink-soft); font-weight: 600; }
+
+  .exhibit-label {
+    font-family: var(--mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+  }
+
+  .legend i { display: inline-block; width: 1.4rem; height: 0; border-top-width: 3px; border-top-style: solid; vertical-align: middle; margin-right: 0.45rem; }
+  .swatch-brick { border-top-color: var(--brick); }
+  .swatch-steel { border-top-color: var(--steel); border-top-style: dashed; }
+
+  /* ---------- tables ---------- */
+
+  .table-wrap { overflow-x: auto; margin: 2rem 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.83rem;
+  }
+
+  th {
+    text-align: right;
+    font-weight: 500;
+    font-size: 0.63rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 0.85rem 0.6rem;
+    border-bottom: 1px solid var(--ink);
+    white-space: nowrap;
+  }
+
+  th:first-child, td:first-child { text-align: left; padding-left: 0; }
+  th:last-child, td:last-child { padding-right: 0; }
+
+  td {
+    text-align: right;
+    padding: 0.5rem 0.85rem;
+    border-bottom: 1px solid var(--rule-soft);
+    white-space: nowrap;
+  }
+
+  tr:last-child td { border-bottom: 1px solid var(--rule); }
+  .row-mark td { background: var(--brick-dim); }
+  .row-mark td:first-child { font-weight: 600; }
+
+  /* ---------- caveats ---------- */
+
+  .caveats {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--steel);
+    padding: 1.5rem 1.7rem;
+    margin: 2rem 0;
+    max-width: var(--measure);
+  }
+
+  .caveats h3 { margin-top: 0; }
+  .caveats ul { margin: 0; padding-left: 1.1rem; }
+  .caveats li { margin-bottom: 0.8rem; font-size: 0.95rem; line-height: 1.55; }
+  .caveats li:last-child { margin-bottom: 0; }
+
+  /* ---------- colophon ---------- */
+
+  .colophon {
+    margin-top: 4.5rem;
+    border-top: 1px solid var(--ink);
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+  }
+
+  .colophon h3 { margin-top: 0; }
+
+  .colophon p, .colophon ul {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 40ch;
+  }
+
+  .colophon ul { margin: 0; padding-left: 1.05rem; }
+  .colophon li { margin-bottom: 0.45rem; }
+
+  a { color: var(--steel); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--brick); }
+  a:focus-visible { outline: 2px solid var(--brick); outline-offset: 3px; }
+
+  pre {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 0.9rem 1.1rem;
+    overflow-x: auto;
+    margin: 1rem 0 0;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="masthead">
+    <div class="kicker">
+      <span><a href="../" style="color:inherit">dataphil lab</a> &nbsp;/&nbsp; MLB shadow test</span>
+      <span>2026-06-01 &rarr; 2026-08-26</span>
+      <span>10,928 settled predictions</span>
+    </div>
+
+    <h1>The model that didn&rsquo;t ship</h1>
+
+    <p class="standfirst">
+      I built a Monte Carlo simulator that prices MLB hitter props, wrote down a pass/fail
+      gate before testing it, and ran it against live sportsbook lines for 87 days without
+      betting a dollar. It failed. This is the autopsy.
+    </p>
+
+    <div class="stamp">
+      <b>Gate: failed &mdash; not deployed</b>
+      <span>Criterion pre-registered 2026-05-30, two days before the first prediction</span>
+    </div>
+
+    <dl class="statline">
+      <div class="stat">
+        <dt>Settled predictions</dt>
+        <dd>10,928<small>877 voided, 145 open</small></dd>
+      </div>
+      <div class="stat">
+        <dt>Predicted / observed</dt>
+        <dd>.623 / .596<small>Brier 0.2392</small></dd>
+      </div>
+      <div class="stat">
+        <dt>Gate cohort ROI</dt>
+        <dd class="neg">&minus;3.69%<small>&plusmn;1.59 SE on n = 2,749</small></dd>
+      </div>
+      <div class="stat">
+        <dt>Closing line value</dt>
+        <dd>+0.002%<small>indistinguishable from zero</small></dd>
+      </div>
+      <div class="stat">
+        <dt>Model weight earned</dt>
+        <dd>22%<small>vs the 50% implied by the edge formula</small></dd>
+      </div>
+    </dl>
+  </header>
+
+  <!-- ================= FINDING 1 ================= -->
+  <section>
+    <div class="finding-head">
+      <div class="finding-num">FINDING<br>01</div>
+      <h2>It is a decent forecaster</h2>
+    </div>
+
+    <div class="prose">
+      <p class="lede">
+        Across 87 days the model said <span class="num">62.3%</span> on average and things
+        happened <span class="num">59.6%</span> of the time. Slightly overconfident, and
+        drifting worse through the season &mdash; but the reliability curve tracks the
+        diagonal everywhere the mass sits.
+      </p>
+
+      <figure>
+        <div class="exhibit-label">Exhibit A &middot; Reliability</div>
+        <svg viewBox="0 0 420 420" role="img" aria-label="Reliability diagram: predicted probability against observed frequency, tracking close to the diagonal with mild overconfidence at the top end.">
+          <g stroke="var(--rule-soft)" stroke-width="1">
+            <line x1="60" y1="380" x2="400" y2="380"/>
+            <line x1="60" y1="40" x2="60" y2="380"/>
+          </g>
+          <line x1="60" y1="380" x2="400" y2="40" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="330" y="70" font-family="var(--mono)" font-size="10" fill="var(--muted)" text-anchor="end">perfect calibration</text>
+          <polyline points="94.3,326.5 152.7,304.4 205.6,250.0 258.5,210.1 309.9,161.1 358.7,138.8"
+                    fill="none" stroke="var(--steel)" stroke-width="2.5" stroke-linejoin="round"/>
+          <g fill="var(--steel)">
+            <circle cx="94.3" cy="326.5" r="4"/><circle cx="152.7" cy="304.4" r="4"/>
+            <circle cx="205.6" cy="250.0" r="4"/><circle cx="258.5" cy="210.1" r="4"/>
+            <circle cx="309.9" cy="161.1" r="4"/><circle cx="358.7" cy="138.8" r="4"/>
+          </g>
+          <g font-family="var(--mono)" font-size="10" fill="var(--muted)">
+            <text x="52" y="384" text-anchor="end">.42</text>
+            <text x="52" y="214" text-anchor="end">.60</text>
+            <text x="52" y="44"  text-anchor="end">.78</text>
+            <text x="60" y="400">.42</text>
+            <text x="230" y="400" text-anchor="middle">predicted probability</text>
+            <text x="400" y="400" text-anchor="end">.78</text>
+            <text x="14" y="214" transform="rotate(-90 14 214)" text-anchor="middle">observed frequency</text>
+          </g>
+        </svg>
+        <figcaption>
+          Six bins, 30+ observations each, <b>n = 10,928</b>. The curve sits just under the
+          diagonal throughout &mdash; consistent mild overconfidence, not a broken model.
+          If the deliverable were &ldquo;estimate the probability this hitter gets a
+          hit,&rdquo; this works.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= FINDING 2 ================= -->
+  <section>
+    <div class="finding-head">
+      <div class="finding-num">FINDING<br>02</div>
+      <h2>It is a bad bettor, and the failure is ordered</h2>
+    </div>
+
+    <div class="prose">
+      <p class="lede">
+        Betting doesn&rsquo;t reward being right. It rewards being right <em>where the market
+        is wrong.</em> So sort every prediction by how far the model departed from the
+        de-vigged market price, and look at what happened.
+      </p>
+
+      <figure>
+        <div class="exhibit-label">Exhibit B &middot; The inversion</div>
+        <div class="legend">
+          <span><i class="swatch-steel"></i>model predicted</span>
+          <span><i class="swatch-brick"></i>actually happened</span>
+        </div>
+        <svg viewBox="0 0 720 400" role="img" aria-label="Win rate by decile of model-market disagreement. The predicted line rises from .568 to .647 while the observed line falls from .608 to .541.">
+          <g stroke="var(--rule-soft)" stroke-width="1">
+            <line x1="60" y1="297.7" x2="700" y2="297.7"/>
+            <line x1="60" y1="253.1" x2="700" y2="253.1"/>
+            <line x1="60" y1="208.5" x2="700" y2="208.5"/>
+            <line x1="60" y1="163.8" x2="700" y2="163.8"/>
+            <line x1="60" y1="119.2" x2="700" y2="119.2"/>
+            <line x1="60" y1="74.6"  x2="700" y2="74.6"/>
+            <line x1="60" y1="30"    x2="700" y2="30"/>
+          </g>
+
+          <polyline points="60,234.3 131.1,161.4 202.2,140.6 273.3,114.8 344.4,105.0 415.6,97.8 486.7,79.7 557.8,74.2 628.9,63.5 700,58.6"
+                    fill="none" stroke="var(--steel)" stroke-width="2" stroke-dasharray="6 4" stroke-linejoin="round"/>
+
+          <polyline points="60,145.1 131.1,194.0 202.2,126.6 273.3,141.1 344.4,129.5 415.6,163.4 486.7,151.1 557.8,187.9 628.9,185.9 700,297.0"
+                    fill="none" stroke="var(--brick)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+          <g fill="var(--brick)">
+            <circle cx="60" cy="145.1" r="4.5"/><circle cx="131.1" cy="194.0" r="4.5"/>
+            <circle cx="202.2" cy="126.6" r="4.5"/><circle cx="273.3" cy="141.1" r="4.5"/>
+            <circle cx="344.4" cy="129.5" r="4.5"/><circle cx="415.6" cy="163.4" r="4.5"/>
+            <circle cx="486.7" cy="151.1" r="4.5"/><circle cx="557.8" cy="187.9" r="4.5"/>
+            <circle cx="628.9" cy="185.9" r="4.5"/><circle cx="700" cy="297.0" r="6"/>
+          </g>
+
+          <line x1="700" y1="58.6" x2="700" y2="297.0" stroke="var(--brick)" stroke-width="1" stroke-dasharray="3 3" opacity="0.65"/>
+          <text x="690" y="180" font-size="11" fill="var(--brick)" text-anchor="end">10.7 pt gap</text>
+
+          <g font-family="var(--mono)" font-size="10" fill="var(--muted)">
+            <text x="52" y="301" text-anchor="end">.54</text>
+            <text x="52" y="256" text-anchor="end">.56</text>
+            <text x="52" y="212" text-anchor="end">.58</text>
+            <text x="52" y="167" text-anchor="end">.60</text>
+            <text x="52" y="122" text-anchor="end">.62</text>
+            <text x="52" y="78"  text-anchor="end">.64</text>
+            <text x="52" y="34"  text-anchor="end">.66</text>
+            <text x="60" y="330">1</text><text x="700" y="330" text-anchor="end">10</text>
+            <text x="380" y="330" text-anchor="middle">decile of model-vs-market disagreement</text>
+            <text x="60" y="352" fill="var(--muted)">model most bearish</text>
+            <text x="700" y="352" text-anchor="end">model most bullish</text>
+          </g>
+        </svg>
+        <figcaption>
+          The predicted line climbs monotonically. The realised line <b>falls</b>. In the
+          decile where the model was most convinced the book was mispriced, it predicted
+          <b>64.7%</b> and delivered <b>54.0%</b> on n = 1,092. This is the signature of a
+          signal that is not merely weak but <b>inverted</b>: the size of the model&rsquo;s
+          disagreement is information about the model&rsquo;s own error, not the
+          market&rsquo;s.
+        </figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Decile</th><th>Mean disagreement</th><th>Predicted</th><th>Observed</th><th>n</th><th>ROI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1 &mdash; most bearish</td><td>&minus;4.9%</td><td>.568</td><td>.608</td><td>1,093</td><td>&minus;7.9%</td></tr>
+            <tr><td>3</td><td>&minus;0.2%</td><td>.610</td><td>.617</td><td>1,093</td><td>&minus;5.9%</td></tr>
+            <tr><td>5</td><td>+2.1%</td><td>.626</td><td>.615</td><td>1,092</td><td>&minus;4.8%</td></tr>
+            <tr><td>7</td><td>+4.3%</td><td>.638</td><td>.606</td><td>1,093</td><td>&minus;4.3%</td></tr>
+            <tr><td>9</td><td>+7.2%</td><td>.645</td><td>.590</td><td>1,093</td><td>&minus;3.7%</td></tr>
+            <tr class="row-mark"><td>10 &mdash; most bullish</td><td>+12.0%</td><td>.647</td><td>.540</td><td>1,092</td><td>&minus;3.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The window that would have fooled me</h3>
+
+      <p>
+        The pre-registered cohort came in at <span class="num">&minus;3.69% &plusmn;
+        1.59%</span> ROI on <span class="num">n = 2,749</span> &mdash; more than two standard
+        errors below zero, on twice the sample the gate asked for. But look at how it got
+        there.
+      </p>
+
+      <figure>
+        <div class="exhibit-label">Exhibit C &middot; Gate cohort by month</div>
+        <svg viewBox="0 0 460 250" role="img" aria-label="Flat-stake ROI by month for the gate cohort: June positive 2.2 percent on 384 legs, July negative 3.4 percent on 1233, August negative 6.1 percent on 1132.">
+          <line x1="40" y1="130" x2="440" y2="130" stroke="var(--ink)" stroke-width="1"/>
+          <g stroke="var(--rule-soft)" stroke-width="1">
+            <line x1="40" y1="74" x2="440" y2="74"/>
+            <line x1="40" y1="186" x2="440" y2="186"/>
+          </g>
+
+          <rect x="80"  y="105.6" width="66" height="24.4" fill="var(--steel)" opacity="0.85"/>
+          <rect x="197" y="130"   width="66" height="37.7" fill="var(--brick)" opacity="0.85"/>
+          <rect x="314" y="130"   width="66" height="68.1" fill="var(--brick)"/>
+
+          <g stroke="var(--ink)" stroke-width="1.2">
+            <line x1="113" y1="58.1" x2="113" y2="153.1"/>
+            <line x1="107" y1="58.1" x2="119" y2="58.1"/><line x1="107" y1="153.1" x2="119" y2="153.1"/>
+            <line x1="230" y1="140.8" x2="230" y2="194.6"/>
+            <line x1="224" y1="140.8" x2="236" y2="140.8"/><line x1="224" y1="194.6" x2="236" y2="194.6"/>
+            <line x1="347" y1="170.4" x2="347" y2="225.8"/>
+            <line x1="341" y1="170.4" x2="353" y2="170.4"/><line x1="341" y1="225.8" x2="353" y2="225.8"/>
+          </g>
+
+          <g font-family="var(--mono)" font-size="11" fill="var(--ink)" text-anchor="middle">
+            <text x="113" y="98" fill="var(--steel)">+2.2%</text>
+            <text x="230" y="181" fill="var(--brick)">&minus;3.4%</text>
+            <text x="347" y="212" fill="var(--brick)">&minus;6.1%</text>
+          </g>
+          <g font-family="var(--mono)" font-size="10" fill="var(--muted)" text-anchor="middle">
+            <text x="113" y="243">JUN &middot; n=384</text>
+            <text x="230" y="243">JUL &middot; n=1,233</text>
+            <text x="347" y="243">AUG &middot; n=1,132</text>
+            <text x="32" y="78" text-anchor="end">+5%</text>
+            <text x="32" y="134" text-anchor="end">0</text>
+            <text x="32" y="190" text-anchor="end">&minus;5%</text>
+          </g>
+        </svg>
+        <figcaption>
+          Flat-stake ROI, error bars <b>&plusmn;1 SE</b>. On 2026-07-08 I ran an interim
+          review, saw <b>+2.5% on n = 552</b>, and wrote that the anti-predictive pattern had
+          &ldquo;weakened.&rdquo; It hadn&rsquo;t. It was 0.7 standard errors of nothing, and
+          it evaporated. Graduating on that window would have deployed a &minus;4% strategy
+          with real money, with the data apparently supporting it.
+        </figcaption>
+      </figure>
+
+      <p>
+        Meanwhile the criterion that was actually pre-registered &mdash; closing line value
+        &mdash; never moved. Across the 964 legs with a captured closing price, mean CLV is
+        <span class="num">+0.002%</span>; on the high-edge subset,
+        <span class="num">+0.009%</span> on n = 289. Zero, to as many decimals as anyone
+        wants. The closing line never came toward these picks, which is the market saying
+        &mdash; quietly, 964 times &mdash; that there was nothing there.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FINDING 3 ================= -->
+  <section>
+    <div class="finding-head">
+      <div class="finding-num">FINDING<br>03</div>
+      <h2>The diagnosis is a weighting error, not a broken model</h2>
+    </div>
+
+    <div class="prose">
+      <p class="lede">
+        A model can lose to the market for two very different reasons: it knows nothing, or it
+        knows something and is being used wrong. These have opposite remedies, so it is worth
+        separating them properly rather than by feel.
+      </p>
+
+      <p>
+        The test is a horse race. Regress the realised outcome on <strong>both</strong>
+        forecasts at once, in log-odds space:
+      </p>
+
+      <pre>logit P(win) = a + b · logit(p_model) + c · logit(p_market)</pre>
+
+      <p>
+        If the model is pure noise, <code>b</code> collapses to zero once the market price is
+        in the equation. It doesn&rsquo;t.
+      </p>
+
+      <figure>
+        <div class="exhibit-label">Exhibit D &middot; Horse race, n = 10,928</div>
+        <svg viewBox="0 0 500 200" role="img" aria-label="Regression coefficients with 95 percent confidence intervals: model forecast 0.231, market price 0.820. Both intervals exclude zero.">
+          <line x1="150" y1="20" x2="150" y2="150" stroke="var(--ink)" stroke-width="1"/>
+          <text x="150" y="168" font-family="var(--mono)" font-size="10" fill="var(--muted)" text-anchor="middle">0</text>
+
+          <rect x="150" y="38" width="69.3" height="30" fill="var(--steel)"/>
+          <g stroke="var(--ink)" stroke-width="1.2">
+            <line x1="157.5" y1="53" x2="281.1" y2="53"/>
+            <line x1="157.5" y1="47" x2="157.5" y2="59"/>
+            <line x1="281.1" y1="47" x2="281.1" y2="59"/>
+          </g>
+          <text x="292" y="57" font-family="var(--mono)" font-size="12" fill="var(--ink)">+0.231</text>
+          <text x="142" y="52" class="lbl" font-size="11.5" fill="var(--ink)" text-anchor="end">model forecast</text>
+          <text x="142" y="66" font-family="var(--mono)" font-size="9.5" fill="var(--muted)" text-anchor="end">z = +2.20</text>
+
+          <rect x="150" y="100" width="246" height="30" fill="var(--muted)" opacity="0.55"/>
+          <g stroke="var(--ink)" stroke-width="1.2">
+            <line x1="335.4" y1="115" x2="456.6" y2="115"/>
+            <line x1="335.4" y1="109" x2="335.4" y2="121"/>
+            <line x1="456.6" y1="109" x2="456.6" y2="121"/>
+          </g>
+          <text x="330" y="119" font-family="var(--mono)" font-size="12" fill="var(--ink)" text-anchor="end">+0.820</text>
+          <text x="142" y="114" class="lbl" font-size="11.5" fill="var(--ink)" text-anchor="end">market price</text>
+          <text x="142" y="128" font-family="var(--mono)" font-size="9.5" fill="var(--muted)" text-anchor="end">z = +7.98</text>
+
+          <text x="250" y="190" font-family="var(--mono)" font-size="9.5" fill="var(--muted)" text-anchor="middle">coefficient in log-odds space, 95% CI</text>
+        </svg>
+        <figcaption>
+          The model contributes real, independent information at <b>2.2 standard errors</b>
+          &mdash; conditional on already knowing the closing price. Most retail models do not
+          clear that bar. But the relative weights say the model earns about <b>22%</b> of the
+          vote and the market <b>78%</b>.
+        </figcaption>
+      </figure>
+
+      <h3>Where that goes wrong</h3>
+
+      <p>
+        Look at what the edge calculation was actually doing.
+        <code>edge = p_model &minus; p_market</code> treats the two forecasts as
+        <strong>equally credible</strong> &mdash; an implicit 50/50 weight on something that
+        earns 22%. The model was levered at roughly <strong>2.3&times; its true
+        strength</strong>, and the size of that error scales with the size of the
+        disagreement.
+      </p>
+
+      <p>
+        Which is exactly the pattern in Finding 02. The further the model departs from the
+        market, the more it is over-weighted, the worse it does. Decile 10 is where the
+        mis-specification is maximal, and decile 10 is where the model dies.
+      </p>
+
+      <p>
+        Corroborating: standalone Brier is <span class="num">0.2392</span> for the model and
+        <span class="num">0.2371</span> for the market price alone. The market is simply the
+        better forecaster of the two. The model&rsquo;s job was never to beat it outright
+        &mdash; only to add something on top &mdash; and the horse race says it does, just far
+        less than the edge formula assumed.
+      </p>
+
+      <p>
+        <strong>So the conclusion is narrow and specific: the edge estimator is
+        mis-specified, not the model.</strong> The right operator is a stacked blend at the
+        measured weights &mdash;
+      </p>
+
+      <pre>logit(p_final) = −0.04 + 0.231 · logit(p_model) + 0.820 · logit(p_market)</pre>
+
+      <p style="margin-top:1.15rem">
+        &mdash; with edge computed off <em>that</em>. Under that blend the edges collapse
+        toward zero and essentially nothing on this market clears the vig. Which is the honest
+        answer, and a different sentence from &ldquo;the model doesn&rsquo;t work.&rdquo;
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= THE GATE ================= -->
+  <section>
+    <div class="finding-head">
+      <div class="finding-num">METHOD</div>
+      <h2>The gate was written down before the test</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        On <strong>2026-05-30</strong>, two days before the first prediction was logged, this
+        went into the project&rsquo;s methodology document at v0.2.0, §8:
+      </p>
+
+      <blockquote>
+        Graduate the simulator to live firing only after N ≥ 200 shadow predictions accumulate
+        with <strong>mean CLV &gt; 0</strong> AND <strong>calibration holding</strong>. Falling
+        short on CLV after N=200 is a finding, not a failure &mdash; it means the backtest edge
+        did not survive contact with market prices, and the model needs attribution work before
+        risking bankroll.
+      </blockquote>
+
+      <p>
+        Two things about that paragraph matter more than anything else in the project.
+      </p>
+
+      <p>
+        First, the bar is <strong>closing line value, not profit.</strong> Whether a bet won is
+        mostly noise at any realistic sample size. Whether the closing line moved toward your
+        side is a far higher-signal test of whether you knew something the market didn&rsquo;t.
+        Grading on profit is how people talk themselves into deploying noise.
+      </p>
+
+      <p>
+        Second, it says in advance what a negative result would mean, so that when one arrived
+        it couldn&rsquo;t be relitigated. That is the entire point of pre-registration, and
+        it&rsquo;s the part of this work I&rsquo;d defend hardest.
+      </p>
+
+      <h3>Settlement hygiene, where track records go to die</h3>
+
+      <p>
+        Players get scratched. If a leg never settles it sits in the log as a blank, and blanks
+        are invisible to every summary statistic &mdash; so a record quietly drops its
+        inconvenient rows. I added an explicit <code>void</code> path gated on the game
+        actually being final with boxscores ingested.
+      </p>
+
+      <p>
+        Then the void path over-fired. A missed morning run made 79 real legs look unsettleable
+        and voided them. I caught it, tightened the condition &mdash; postponed games never
+        post as Final, so they need an age-based rule instead &mdash; and shipped a repair path
+        that flips false voids back once stats arrive. It recovered 73 of the 79.
+      </p>
+
+      <p>
+        That second one is the tell. The cheap move was to leave 79 legs voided; nobody would
+        have known, and the record would have looked marginally cleaner. Rebuilding the rows
+        was strictly worse for the numbers and strictly better for the evidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CAVEATS ================= -->
+  <section>
+    <div class="finding-head">
+      <div class="finding-num">LIMITS</div>
+      <h2>What I got wrong</h2>
+    </div>
+
+    <div class="prose">
+      <div class="caveats">
+        <ul>
+          <li>
+            <strong>Concentration.</strong> 10,821 of 10,928 settled legs are one market:
+            hitter over 0.5 hits, the mainline. That is the most efficiently priced player
+            prop on the board &mdash; I had written down <em>before</em> this test that I
+            expected it to be unbeatable &mdash; and I spent three months proving it. The
+            strategy I actually believed in was alternate lines, which the free odds tier
+            doesn&rsquo;t carry. This result is about that market, not about the model in
+            general. I tested what was easy to test rather than what I wanted to know.
+          </li>
+          <li>
+            <strong>A threshold I moved mid-test.</strong> The ≥1,200-leg re-cut point was
+            added on 2026-07-08, during the test, right after the encouraging window. The
+            original gate (N ≥ 200, CLV &gt; 0) is what actually binds; the later threshold is
+            a researcher degree of freedom and I&rsquo;m flagging it rather than quietly
+            presenting it as part of the original design.
+          </li>
+          <li>
+            <strong>Noisy market prices.</strong> Single book, free tier, one poll per game,
+            two-way proportional de-vig. <code>p_market</code> carries real measurement error,
+            which attenuates the horse-race coefficients &mdash; the model&rsquo;s true
+            <code>b</code> is probably somewhat higher than 0.231.
+          </li>
+          <li>
+            <strong>Calibration drift went unexamined.</strong> Predicted minus observed was
+            ~0.002 in June and ~0.074 by August. I have a hypothesis &mdash; the simulator
+            treats plate appearances as conditionally independent, so it understates
+            game-level variance &mdash; and a partial fix that is implemented but disabled
+            pending a proper variance fit. Unresolved.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COLOPHON ================= -->
+  <footer class="colophon">
+    <div>
+      <h3>What was built</h3>
+      <ul>
+        <li>7.8M pitches of Statcast data, 2015&ndash;2025, local Parquet archive</li>
+        <li>As-of-date feature stores for pitcher stuff and hitter quality, every row stamped <code>as_of = date &minus; 1</code></li>
+        <li>A joint lineup simulator &mdash; hits, runs and RBI from one simulation rather than multiplied marginals</li>
+        <li>A daily pipeline on Task Scheduler: refresh, pull slate, pull odds, simulate, log, settle</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What comes next</h3>
+      <ul>
+        <li>Re-derive edge from the stacked blend and re-run the gate on the corrected estimator</li>
+        <li>Decompose the high-edge misses against weather, umpire, bullpen rest, lineup slot, late scratches &mdash; the horse race says a feature is missing</li>
+        <li>Test the actual thesis: alternate lines, where 78% market weight may not hold</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Check the arithmetic</h3>
+      <p>
+        The append-only prediction log and a script that regenerates every number and figure
+        above &mdash; including the regression, Newton&ndash;Raphson by hand rather than a
+        library call &mdash; are public. The model source stays private; the evidence is the
+        part worth checking.
+      </p>
+      <p style="margin-top:0.9rem">
+        <a href="explorer.html"><b>Drag the weight yourself &rarr;</b></a><br>
+        <a href="https://colab.research.google.com/github/dataphilth/dataphil-lab/blob/main/projects/mlb-shadow-test/notebook.ipynb">Run the analysis in Colab</a><br>
+        <a href="https://github.com/dataphilth/dataphil-lab">Data and code on GitHub</a>
+      </p>
+      <pre>python analysis/reproduce.py</pre>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
