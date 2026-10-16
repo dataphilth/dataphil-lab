@@ -169,6 +169,38 @@
 
   <article class="project">
     <div class="proj-top">
+      <h2><a href="warehouse-migration/">Moving the warehouse</a></h2>
+      <span class="chip chip-live">Reconciled</span>
+    </div>
+    <p class="proj-meta">Oct 2026 &middot; 177,812 rows &middot; SQLite &rarr; Snowflake, dbt</p>
+
+    <div class="proj-body">
+      <p class="result" style="border-left-color:var(--steel)">
+        Seven tables moved, rebuilt as a star schema, and checked against the original:
+        26 of 26 reconciliation checks pass.
+      </p>
+
+      <p>
+        I moved part of the warehouse behind the MLB model from SQLite into Snowflake and
+        rebuilt it with dbt, then reconciled row counts, keys, column totals and per-season
+        batting lines on both ends before trusting any of it.
+      </p>
+      <p>
+        The dbt tests that replaced the database&rsquo;s constraints caught three things SQLite
+        never checked: a franchise rename the team table can&rsquo;t represent, All-Star
+        rosters, and exhibition games mixed into regular-season batting lines.
+      </p>
+
+      <div class="links">
+        <a class="primary" href="warehouse-migration/">Read the writeup</a>
+        <a href="https://github.com/dataphilth/dataphil-lab/blob/main/projects/warehouse-migration/reconciliation.md">Reconciliation output</a>
+        <a href="https://github.com/dataphilth/dataphil-lab/tree/main/projects/warehouse-migration/warehouse">Code</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="proj-top">
       <h2><a href="mlb-shadow-test/">The MLB shadow test</a></h2>
       <span class="chip chip-killed">Not deployed</span>
     </div>

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    database: MLB
+    schema: RAW
+    description: Tables landed from the SQLite warehouse, unchanged.
+    tables:
+      - name: players
+      - name: teams
+      - name: parks
+      - name: seasons
+      - name: games
+      - name: game_results
+      - name: batter_game_stats

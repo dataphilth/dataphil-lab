@@ -1,0 +1,46 @@
+version: 2
+
+# Snowflake does not enforce primary keys. These tests do the job the
+# SQLite PRIMARY KEY / CHECK constraints used to do.
+models:
+  - name: stg_players
+    columns:
+      - name: player_id
+        data_tests: [unique, not_null]
+      - name: bats
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['L', 'R', 'S']
+  - name: stg_teams
+    columns:
+      - name: team_id
+        data_tests: [unique, not_null]
+      - name: team_abbr
+        data_tests: [unique, not_null]
+  - name: stg_parks
+    columns:
+      - name: park_id
+        data_tests: [unique, not_null]
+  - name: stg_seasons
+    columns:
+      - name: season
+        data_tests: [unique, not_null]
+  - name: stg_games
+    columns:
+      - name: game_pk
+        data_tests: [unique, not_null]
+      - name: game_date
+        data_tests: [not_null]   # catches any date string try_to_date couldn't parse
+  - name: stg_game_results
+    columns:
+      - name: game_pk
+        data_tests: [unique, not_null]
+  - name: stg_batter_game_stats
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [game_pk, player_id]
+    columns:
+      - name: game_date
+        data_tests: [not_null]

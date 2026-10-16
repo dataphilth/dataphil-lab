@@ -1,0 +1,6 @@
+# Install into a separate Python 3.12 venv (dbt does not support every
+# adapter on 3.14 yet). Versions below were tested together on 2026-10-16.
+dbt-core~=1.11.0
+dbt-snowflake~=1.11.0     # also installs snowflake-connector-python + cryptography
+pandas>=2.2
+pyarrow>=17.0

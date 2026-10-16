@@ -1,0 +1,14 @@
+# Copy to %USERPROFILE%\.dbt\profiles.yml  (never commit the real one)
+mlb_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"   # e.g. abc12345.us-east-1 or orgname-acctname
+      user: MIGRATION_SVC
+      private_key_path: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PATH') }}"
+      role: MIGRATION_ROLE
+      warehouse: MIGRATION_WH
+      database: MLB
+      schema: ANALYTICS
+      threads: 4

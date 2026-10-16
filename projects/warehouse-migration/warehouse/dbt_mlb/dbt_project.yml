@@ -1,0 +1,14 @@
+name: mlb_warehouse
+version: "1.0.0"
+config-version: 2
+profile: mlb_warehouse
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  mlb_warehouse:
+    staging:
+      +materialized: view    # thin cleanup layer: cheap, always current
+    marts:
+      +materialized: table   # the star schema analysts query

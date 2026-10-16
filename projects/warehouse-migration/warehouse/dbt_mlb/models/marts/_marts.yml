@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: dim_game
+    columns:
+      - name: game_pk
+        data_tests: [unique, not_null]
+      - name: season
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_season')
+                field: season
+      - name: home_team_abbr
+        data_tests:
+          # warn, not fail: historical abbreviations (franchise moves,
+          # renames) may not exist in the current teams table
+          - relationships:
+              arguments:
+                to: ref('dim_team')
+                field: team_abbr
+              config:
+                severity: warn
+
+  - name: fct_batter_game
+    description: Batting line per batter per game -- the H+R+RBI ground truth.
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [game_pk, player_id]
+    columns:
+      - name: game_pk
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_game')
+                field: game_pk
+      - name: season
+        data_tests: [not_null]
+      - name: player_id
+        data_tests:
+          # warn: by design, old box scores name players missing from the
+          # current players snapshot (see sql/016 in mlb-model-v2)
+          - relationships:
+              arguments:
+                to: ref('dim_player')
+                field: player_id
+              config:
+                severity: warn
+      - name: team_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_team')
+                field: team_id
+              config:
+                severity: warn
+      - name: hrr
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "= hits + runs + rbis"

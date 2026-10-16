@@ -9,6 +9,18 @@ and the code to recompute every number.
 
 ## Projects
 
+### [Moving the warehouse](https://lab.dataphil.com/warehouse-migration/) · reconciled
+
+Seven tables of the MLB model's SQLite warehouse, **177,812 rows**, moved into Snowflake and
+rebuilt as a star schema with dbt. Reconciled on both ends before trusting any of it:
+**26 of 26 checks pass** (row counts, distinct keys, column totals, per-season batting lines).
+The dbt tests that replaced the database's constraints caught a franchise rename the team table
+can't represent, All-Star rosters, and exhibition games in the regular-season batting lines.
+
+**[Writeup](https://lab.dataphil.com/warehouse-migration/)** ·
+**[Reconciliation output](projects/warehouse-migration/reconciliation.md)** ·
+**[Code](projects/warehouse-migration/warehouse/)**
+
 ### [The MLB shadow test](https://lab.dataphil.com/mlb-shadow-test/) · not deployed
 
 A Monte Carlo simulator that prices MLB hitter props from 7.8M pitches of Statcast data. I
