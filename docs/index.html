@@ -172,7 +172,7 @@
       <h2><a href="warehouse-migration/">Moving the warehouse</a></h2>
       <span class="chip chip-live">Reconciled</span>
     </div>
-    <p class="proj-meta">Oct 2026 &middot; 177,812 rows &middot; SQLite &rarr; Snowflake, dbt</p>
+    <p class="proj-meta">Oct 2026 &middot; 180,542 rows &middot; SQLite &rarr; Snowflake, dbt</p>
 
     <div class="proj-body">
       <p class="result" style="border-left-color:var(--steel)">
@@ -186,9 +186,10 @@
         batting lines on both ends before trusting any of it.
       </p>
       <p>
-        The dbt tests that replaced the database&rsquo;s constraints caught three things SQLite
-        never checked: a franchise rename the team table can&rsquo;t represent, All-Star
-        rosters, and exhibition games mixed into regular-season batting lines.
+        The checks turned up a full 2025 season of game results that had never been pulled,
+        2,730 completed games, which I backfilled before re-running everything. The dbt tests
+        also caught a franchise rename the team table can&rsquo;t represent, and All-Star and
+        exhibition games mixed into regular-season batting lines.
       </p>
 
       <div class="links">

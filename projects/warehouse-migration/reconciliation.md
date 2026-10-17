@@ -1,6 +1,6 @@
 # Reconciliation: SQLite -> Snowflake
 
-Run 2026-10-16 14:47
+Run 2026-10-16 18:39 (after backfilling 2025 game results)
 
 ## Table checks (RAW layer)
 
@@ -16,12 +16,12 @@ Run 2026-10-16 14:47
 | seasons | distinct_pk | 12 | 12 | PASS |
 | games | row_count | 7,832 | 7,832 | PASS |
 | games | distinct_pk | 7,832 | 7,832 | PASS |
-| game_results | row_count | 5,101 | 5,101 | PASS |
-| game_results | distinct_pk | 5,101 | 5,101 | PASS |
-| game_results | sum(home_runs) | 22,786 | 22,786 | PASS |
-| game_results | sum(away_runs) | 22,555 | 22,555 | PASS |
-| game_results | sum(home_hits) | 41,149 | 41,149 | PASS |
-| game_results | sum(away_hits) | 42,201 | 42,201 | PASS |
+| game_results | row_count | 7,831 | 7,831 | PASS |
+| game_results | distinct_pk | 7,831 | 7,831 | PASS |
+| game_results | sum(home_runs) | 35,191 | 35,191 | PASS |
+| game_results | sum(away_runs) | 34,670 | 34,670 | PASS |
+| game_results | sum(home_hits) | 63,543 | 63,543 | PASS |
+| game_results | sum(away_hits) | 65,079 | 65,079 | PASS |
 | batter_game_stats | row_count | 157,853 | 157,853 | PASS |
 | batter_game_stats | distinct_pk | 157,853 | 157,853 | PASS |
 | batter_game_stats | sum(plate_appearances) | 566,012 | 566,012 | PASS |

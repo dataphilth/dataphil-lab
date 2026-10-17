@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Seven tables of an MLB warehouse moved from SQLite to Snowflake and rebuilt with dbt: 177,812 rows, 26 reconciliation checks, and three things the old database never checked.">
+<meta name="description" content="Seven tables of an MLB warehouse moved from SQLite to Snowflake and rebuilt with dbt: 180,542 rows, 26 reconciliation checks, and a missing season of results found and fixed.">
 <meta name="author" content="Phil Alexander">
 <meta property="og:type" content="website">
-<meta property="og:description" content="Seven tables of an MLB warehouse moved from SQLite to Snowflake and rebuilt with dbt: 177,812 rows, 26 reconciliation checks, and three things the old database never checked.">
+<meta property="og:description" content="Seven tables of an MLB warehouse moved from SQLite to Snowflake and rebuilt with dbt: 180,542 rows, 26 reconciliation checks, and a missing season of results found and fixed.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%BE</text></svg>">
 <title>Warehouse Migration</title>
@@ -427,7 +427,7 @@
     <div class="kicker">
       <span><a href="../" style="color:inherit">dataphil lab</a> &nbsp;/&nbsp; Warehouse migration</span>
       <span>2026-10-16</span>
-      <span>177,812 rows &middot; SQLite &rarr; Snowflake</span>
+      <span>180,542 rows &middot; SQLite &rarr; Snowflake</span>
     </div>
 
     <h1>Moving the warehouse, and proving nothing moved</h1>
@@ -435,8 +435,8 @@
     <p class="standfirst">
       I moved seven tables of the warehouse behind my MLB model from SQLite into Snowflake,
       rebuilt them as a star schema with dbt, and checked every table against the original
-      before trusting a single row. Everything ties out. The tests also caught three things
-      the old database had never checked.
+      before trusting a single row. Getting there turned up a full season of game results the
+      old database had never pulled. I backfilled it, re-ran everything, and it all ties out.
     </p>
 
     <div class="stamp stamp-pass">
@@ -447,7 +447,7 @@
     <dl class="statline">
       <div class="stat">
         <dt>Rows migrated</dt>
-        <dd>177,812<small>7 tables, 2024&ndash;2026</small></dd>
+        <dd>180,542<small>7 tables, 2024&ndash;2026</small></dd>
       </div>
       <div class="stat">
         <dt>Reconciliation</dt>
@@ -458,8 +458,8 @@
         <dd>13 models<small>29 tests, about 10 seconds</small></dd>
       </div>
       <div class="stat">
-        <dt>Test findings</dt>
-        <dd>3 warnings<small>0 errors &middot; all real, none from the move</small></dd>
+        <dt>Gap found &amp; fixed</dt>
+        <dd>2,730 games<small>a 2025 season of missing results, backfilled</small></dd>
       </div>
       <div class="stat">
         <dt>Compute</dt>
@@ -554,7 +554,7 @@
             <tr><td><code>batter_game_stats</code></td><td>157,853</td><td>fact: one batting line per batter per game</td></tr>
             <tr><td><code>games</code></td><td>7,832</td><td>schedule, park, weather</td></tr>
             <tr><td><code>players</code></td><td>6,919</td><td>player dimension</td></tr>
-            <tr><td><code>game_results</code></td><td>5,101</td><td>final scores, joined onto games</td></tr>
+            <tr><td><code>game_results</code></td><td>7,831</td><td>final scores, joined onto games</td></tr>
             <tr><td><code>parks</code></td><td>65</td><td>park dimension</td></tr>
             <tr><td><code>teams</code></td><td>30</td><td>team dimension</td></tr>
             <tr><td><code>seasons</code></td><td>12</td><td>season dimension, rule-change flags</td></tr>
@@ -609,49 +609,57 @@
   <section>
     <div class="finding-head">
       <div class="finding-num">PART<br>03</div>
-      <h2>The tests found what SQLite had been letting through</h2>
+      <h2>What the checks found</h2>
     </div>
 
     <div class="prose">
       <p class="lede">
         Snowflake accepts primary and foreign key syntax but only enforces <code>NOT NULL</code>,
-        so in the new warehouse dbt tests do that job. Three relationship tests came back with
-        results. None were migration errors. They were already true in the source, and SQLite
-        never checked them because none of those columns had a foreign key.
+        so in the new warehouse dbt tests do that job. Between those tests and one follow-up
+        query, four problems surfaced. None came from the migration. All four were already
+        true in the source, and SQLite never checked any of them.
       </p>
 
+      <h3>A missing season of results</h3>
+      <p>
+        The first build showed 7,832 games but only 5,101 final scores. Broken down by season
+        and status, <b>2,730 of the gaps were 2025 games marked Final</b> with no result row.
+        The batting lines for those games existed, because a separate script had backfilled
+        them. The step that writes final scores had simply never been run for that season.
+      </p>
+      <p>
+        It didn&rsquo;t touch the hitter model, which scores against batting lines. It did mean
+        anything joining to final scores for 2025, mainly the game-totals backtest, was coming
+        up empty. One run of the pipeline&rsquo;s existing catch-up mode pulled 2,844 box
+        scores in about 56 minutes. Then I re-exported, reloaded, rebuilt and reconciled.
+        Final scores now cover <b>7,831 of 7,832 games</b>. The one left is a 2026 game that
+        was never played.
+      </p>
+
+      <h3>Three relationship warnings</h3>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Test</th><th>Rows</th><th>Values found</th></tr></thead>
+          <thead><tr><th>Values found</th><th>Dates</th><th>What they are</th></tr></thead>
           <tbody>
-            <tr><td>Home team not in team table</td><td>86 games</td><td><code>OAK AL NL YOM HAN MEM MTY</code></td></tr>
-            <tr><td>Batting team not in team table</td><td>276 lines</td><td>IDs 159, 160 + eight others</td></tr>
-            <tr><td>Batter not in player table</td><td>281 lines</td><td>147 distinct players</td></tr>
+            <tr><td><code>OAK</code></td><td>77 home games, 2024</td><td>the A&rsquo;s, before the <code>ATH</code> rename</td></tr>
+            <tr><td><code>AL</code> <code>NL</code> &middot; IDs 159, 160</td><td>2024-07-16, 2025-07-15, 2026-07-14</td><td>All-Star Games</td></tr>
+            <tr><td><code>YOM</code> <code>HAN</code></td><td>2025-03-15 to 16</td><td>Tokyo exhibitions: Yomiuri, Hanshin</td></tr>
+            <tr><td><code>MEM</code> <code>MTY</code></td><td>2025-03-24</td><td>exhibitions: Memphis, Monterrey</td></tr>
           </tbody>
         </table>
       </div>
-
       <p>
         <b>A rename the dimension can&rsquo;t represent.</b> The A&rsquo;s became
-        <code>ATH</code> for 2025. The team table stores current abbreviations only, so every
-        2024 Oakland home game points at a code that no longer exists. That&rsquo;s a textbook
-        slowly changing dimension. The fix is to keep the history, each name valid for a
-        date range.
+        <code>ATH</code> for 2025. The team table stores current abbreviations only, so 77
+        Oakland home games from 2024 point at a code that no longer exists. That&rsquo;s a
+        textbook slowly changing dimension. The fix is to keep the history, each name valid
+        for a date range.
       </p>
       <p>
-        <b>All-Star rosters.</b> <code>AL</code> and <code>NL</code>, team IDs 159 and 160.
-      </p>
-      <p>
-        <b>Exhibition games.</b> <code>YOM</code> and <code>HAN</code> line up with the
-        Yomiuri Giants and Hanshin Tigers, <code>MEM</code> with Memphis (Triple-A),
-        <code>MTY</code> with Monterrey. The other team IDs sit outside the range MLB uses for
-        its 30 clubs. The 147 missing players are very likely these rosters. Foreign and
-        minor-league players were never in an MLB player table.
-      </p>
-      <p>
-        Altogether that&rsquo;s 276 of 157,853 batting lines, 0.17%, from games that
-        aren&rsquo;t regular season. That&rsquo;s too few to move the model&rsquo;s backtest,
-        but the table has no game-type field to filter on, and it should.
+        <b>Games that aren&rsquo;t regular season.</b> All-Star rosters and spring
+        exhibitions account for 276 batting lines, and their 147 players were never in an MLB
+        player table. That&rsquo;s 0.17% of 157,853 lines, too few to move the backtest. But
+        the table has no game-type field to filter them on, and it should.
       </p>
     </div>
   </section>
@@ -674,8 +682,8 @@
         Rebuilding them and reconciling proves the logic matches too.
       </p>
       <p>
-        <b>Constraints become tests.</b> That&rsquo;s not a workaround. It&rsquo;s where every
-        finding in Part 03 came from.
+        <b>Constraints become tests.</b> That&rsquo;s not a workaround. It&rsquo;s where the findings
+        in Part 03 came from.
       </p>
       <p>
         <b>A key pair, not a password.</b> Snowflake is retiring password-only sign-ins for
@@ -692,7 +700,7 @@
         <h3>What this isn&rsquo;t</h3>
         <ul>
           <li>
-            <strong>Small.</strong> 177,812 rows, three seasons, one person, one afternoon. A
+            <strong>Small.</strong> 180,542 rows, three seasons, one person, one day. A
             production migration has live users, downstream reports to re-point and a cutover
             window. This had none of those.
           </li>
@@ -700,16 +708,6 @@
             <strong>A full reload, not incremental.</strong> Right for a one-time move. Keeping
             Snowflake in sync with the nightly pipeline would take incremental models and
             merges.
-          </li>
-          <li>
-            <strong>Inferred labels.</strong> The exhibition games are identified from
-            abbreviations and ID ranges, not an official game-type field, which this table
-            doesn&rsquo;t have.
-          </li>
-          <li>
-            <strong>An open question.</strong> 2,731 games have no result row and sit in
-            <code>dim_game</code> with an empty score. Postponements and unplayed games are the
-            likely answer. I haven&rsquo;t traced it yet.
           </li>
           <li>
             <strong>Provisional cost.</strong> About 0.1 credits as first reported. Snowflake
@@ -736,6 +734,7 @@
       <ul>
         <li>Team-name history in <code>dim_team</code>, so <code>OAK</code> and <code>ATH</code> resolve to one franchise</li>
         <li>A game-type field upstream, regular season by default</li>
+        <li>A scheduled check that every Final game has a final score</li>
         <li>The 7.8M-pitch Statcast archive as a volume test</li>
       </ul>
     </div>

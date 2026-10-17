@@ -1,12 +1,14 @@
-# I moved part of my baseball warehouse to Snowflake. The tests found what SQLite had been letting through.
+# I moved part of my baseball warehouse to Snowflake. The checks found a missing season.
 
 **Summary.** I took seven tables from the SQLite warehouse behind my MLB model, moved them into
 Snowflake, rebuilt them as a star schema with dbt, and then checked every table against the
-original before trusting any of it. **177,812 rows, 26 reconciliation checks, 26 passes**: row
-counts, distinct keys, column totals, and hits, runs and RBI season by season. The dbt tests
-that replaced the database's constraints also flagged **three things the old database had
-never checked**: a franchise rename the team table can't represent, All-Star rosters mixed in
-with regular-season batting lines, and what look like exhibition games against Japanese,
+original before trusting any of it. **180,542 rows, 26 reconciliation checks, 26 passes**: row
+counts, distinct keys, column totals, and hits, runs and RBI season by season.
+
+Getting there turned up four things the old database had never checked. The biggest: **an entire
+season of game results, 2,730 completed games, had never been pulled.** I backfilled it and re-ran
+everything. The other three are a franchise rename the team table can't represent, All-Star
+rosters mixed in with regular-season batting lines, and spring exhibitions against Japanese,
 Mexican and minor-league clubs.
 
 I did this to learn Snowflake and dbt properly, on data I know well enough to notice when a
@@ -24,7 +26,7 @@ at the player, team, game, park and season.
 |---|---:|---|
 | `batter_game_stats` | 157,853 | fact: one batting line per batter per game |
 | `games` | 7,832 | game dimension: schedule, park, weather |
-| `game_results` | 5,101 | final scores, joined onto games |
+| `game_results` | 7,831 | final scores, joined onto games |
 | `players` | 6,919 | player dimension |
 | `parks` | 65 | park dimension |
 | `teams` | 30 | team dimension |
@@ -78,32 +80,47 @@ dropped row can't hide.
 
 Full output: [`reconciliation.md`](reconciliation.md).
 
-## 4. The tests found what SQLite had been letting through
+## 4. What the checks found
 
 Snowflake accepts `PRIMARY KEY` and `FOREIGN KEY` syntax but only enforces `NOT NULL`, so in
-the new warehouse dbt tests do the job constraints used to do. The relationship tests were set
-to warn rather than fail, and three came back with results. None were migration errors. They
-were already true in the source. SQLite never checked these columns because none of them had a
-foreign key.
+the new warehouse dbt tests do the job constraints used to do. Between those tests and a
+follow-up query, four problems surfaced. None were migration errors. All four were already true
+in the source, and SQLite never checked any of them.
 
-| Warning | Rows | What it turned out to be |
-|---|---:|---|
-| Game's home team not in the team table | 86 games | `OAK`, `AL`, `NL`, `YOM`, `HAN`, `MEM`, `MTY` |
-| Batting line's team not in the team table | 276 lines | team IDs 159 and 160, plus 105, 235, 241, 341, 343, 459, 562, 5434 |
-| Batting line's player not in the player table | 281 lines, 147 players | consistent with the same rows |
+### A missing season of results
 
-Three different things are going on:
+The first build showed 7,832 games but only 5,101 final scores. Broken down by season and
+status, **2,730 of the gaps were 2025 games marked Final** with no result row. The batting lines
+for those games existed, because a separate script had backfilled them. The step that writes
+final scores had simply never been run for that season.
+
+It didn't touch the hitter model, which scores against batting lines. It did mean anything
+joining to final scores for 2025, mainly the game-totals backtest, was coming up empty.
+
+The fix was one run of the pipeline's existing catch-up mode: 2,844 box scores pulled in about
+56 minutes. Then I re-exported, reloaded, rebuilt and reconciled. Final scores now cover
+**7,831 of 7,832 games**. The one left is a 2026 game that was never played.
+
+### Three relationship warnings
+
+| Warning | Rows | Values found | Dates |
+|---|---:|---|---|
+| Home team not in team table | 86 games | `OAK` | 77 A's home games, 2024 |
+| | | `AL`, `NL` | 2024-07-16, 2025-07-15, 2026-07-14 |
+| | | `YOM`, `HAN` | 2025-03-15 to 16 |
+| | | `MEM`, `MTY` | 2025-03-24 |
+| Batting team not in team table | 276 lines | team IDs 159, 160 + eight others | same games |
+| Batter not in player table | 281 lines | 147 distinct players | same games |
 
 - **A rename the dimension can't represent.** The A's became `ATH` for the 2025 season. The
-  team table stores each team's current abbreviation only, so every 2024 Oakland home game
-  points at a code that no longer exists. This is a textbook *slowly changing dimension*. The
-  fix is to keep the history, with each name valid for a date range.
-- **All-Star rosters.** `AL` and `NL`, team IDs 159 and 160.
-- **Exhibition games.** `YOM` and `HAN` line up with the Yomiuri Giants and Hanshin Tigers,
-  `MEM` with Memphis (Triple-A), `MTY` with Monterrey. The other unfamiliar team IDs sit
-  outside the range MLB uses for its 30 clubs. The 147 players missing from the player table
-  are very likely these rosters. Foreign and minor-league players were never in an MLB player
-  table.
+  team table stores current abbreviations only, so every 2024 Oakland home game points at a
+  code that no longer exists. This is a textbook *slowly changing dimension*. The fix is to
+  keep the history, with each name valid for a date range.
+- **All-Star Games.** `AL` and `NL` on the three All-Star dates, team IDs 159 and 160.
+- **Spring exhibitions.** `YOM` and `HAN` are the Yomiuri Giants and Hanshin Tigers, played in
+  Tokyo on March 15 and 16, 2025. `MEM` (Memphis, Triple-A) and `MTY` (Monterrey) are
+  exhibitions on March 24, 2025. The 147 missing players are those rosters. Foreign and
+  minor-league players were never in an MLB player table.
 
 Altogether, 276 of 157,853 batting lines (0.17%) come from games that aren't regular season.
 That's too few to move the model's backtest, but the table has no game-type field to filter
@@ -119,7 +136,7 @@ sitting one layer down.
 generated columns in SQLite. Copying them would only prove the copy worked. Rebuilding them in
 dbt and reconciling against the source proves the logic matches too.
 
-**Constraints become tests.** That's not a workaround. It's where every finding in section 4
+**Constraints become tests.** That's not a workaround. It's where the findings in section 4
 came from.
 
 **A service user with a key pair, not a password.** Snowflake is retiring password-only
@@ -133,15 +150,11 @@ from SQLite's declared schema and fails loudly if a value doesn't fit.
 
 ## 6. What this isn't
 
-- **Small.** 177,812 rows across three seasons, done by one person in an afternoon. A
+- **Small.** 180,542 rows across three seasons, done by one person in a day. A
   production migration has live users, downstream reports to re-point, and a cutover window.
   This had none of those.
 - **A full reload, not incremental.** Truncate-and-load is right for a one-time move. Keeping
   Snowflake in sync with the nightly pipeline would mean incremental models and merges.
-- **Exhibition labels are inferred.** I identified those games from abbreviations and team ID
-  ranges, not from an official game-type field, which this table doesn't have.
-- **2,731 games have no result row.** The left join keeps them in `dim_game` with an empty
-  score. I haven't traced why yet. Postponements and unplayed games are the likely answer.
 - **Cost is provisional.** Snowflake reported about 0.1 credits for the whole job, which is
   under a dollar of compute, but its usage figures can lag up to 24 hours.
 
@@ -152,6 +165,8 @@ from SQLite's declared schema and fails loudly if a value doesn't fit.
 - Add a game-type field upstream and filter the fact table to regular season by default
 - Load the 7.8M-pitch Statcast archive as a volume test, and compare compute sizes
 - Check whether any of the 276 non-regular-season lines reached the model's predictions
+- Add a scheduled check that final scores exist for every Final game, so a gap like 2025 can't
+  sit unnoticed again
 
 ## Reproduce
 

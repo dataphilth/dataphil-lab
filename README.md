@@ -11,11 +11,12 @@ and the code to recompute every number.
 
 ### [Moving the warehouse](https://lab.dataphil.com/warehouse-migration/) · reconciled
 
-Seven tables of the MLB model's SQLite warehouse, **177,812 rows**, moved into Snowflake and
+Seven tables of the MLB model's SQLite warehouse, **180,542 rows**, moved into Snowflake and
 rebuilt as a star schema with dbt. Reconciled on both ends before trusting any of it:
 **26 of 26 checks pass** (row counts, distinct keys, column totals, per-season batting lines).
-The dbt tests that replaced the database's constraints caught a franchise rename the team table
-can't represent, All-Star rosters, and exhibition games in the regular-season batting lines.
+The checks found a full 2025 season of game results (2,730 completed games) that had never been
+pulled; it was backfilled and everything re-run. The dbt tests also caught a franchise rename the
+team table can't represent, and All-Star and exhibition games in the regular-season batting lines.
 
 **[Writeup](https://lab.dataphil.com/warehouse-migration/)** ·
 **[Reconciliation output](projects/warehouse-migration/reconciliation.md)** ·
