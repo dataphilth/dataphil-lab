@@ -1,0 +1,59 @@
+name: dataphil.com watchdog
+
+# Checks the LIVE site's own verdict at https://dataphil.com/api/health and
+# mails only when something is actually stale or unreachable. It reads the
+# public health endpoint and nothing else.
+#
+# Moved here from the private dataphil repo on 2026-10-28 (build 085): runner
+# minutes on a public repo aren't billed, and a watchdog belongs outside the
+# pipeline it watches. Same three times as before:
+#   15:00 UTC  11:00 ET daylight / 10:00 ET standard
+#   19:00 UTC  15:00 ET daylight / 14:00 ET standard
+#   22:50 UTC  18:50 ET daylight / 17:50 ET standard - is today's Close final?
+#
+# watchdog/check_health.py is a copy of scripts/check_health.py in the private
+# repo (stdlib only). Keep the two in sync when either changes.
+#
+# Needs two repo secrets: GMAIL_ADDRESS and GMAIL_APP_PASSWORD. Without them a
+# real alert can't mail, the run goes red, and GitHub's own "Run failed" email
+# is the fallback alert.
+
+on:
+  schedule:
+    - cron: "0 15 * * 1-5"
+    - cron: "0 19 * * 1-5"
+    - cron: "50 22 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the verdict but do not send mail"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dataphil-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25   # two looks: up to ~7 min each (4 attempts x 90 s) + the 6 min wait
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: watchdog
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Check live freshness
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SITE_URL: https://dataphil.com
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          python watchdog/check_health.py $ARGS
